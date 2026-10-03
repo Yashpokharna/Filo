@@ -39,12 +39,7 @@ export const metadata: Metadata = {
   twitter: { card: "summary_large_image" },
 };
 
-export const viewport: Viewport = {
-  themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#f5f4f1" },
-    { media: "(prefers-color-scheme: dark)", color: "#0f0f0e" },
-  ],
-};
+export const viewport: Viewport = { themeColor: "#f5f4f1" };
 
 export default async function RootLayout({ children }: LayoutProps<"/">) {
   const leads = await getStyleLeads();

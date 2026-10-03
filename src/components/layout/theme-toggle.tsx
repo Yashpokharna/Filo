@@ -5,8 +5,8 @@ import { cn } from "@/lib/format";
 
 export const THEME_KEY = "filo-theme";
 
-/** Runs before first paint: stored choice, else the OS preference. */
-export const themeScript = `try{var t=localStorage.getItem("${THEME_KEY}");if(t!=="light"&&t!=="dark")t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";document.documentElement.dataset.theme=t;var d=document.documentElement.dataset;if(sessionStorage.getItem("filo-intro")||matchMedia("(prefers-reduced-motion: reduce)").matches)d.intro="seen";else d.introPhase="loading"}catch(e){}`;
+/** Runs before first paint: the visitor's saved choice, else light (the default). */
+export const themeScript = `try{var t=localStorage.getItem("${THEME_KEY}");if(t!=="dark")t="light";document.documentElement.dataset.theme=t;var d=document.documentElement.dataset;if(sessionStorage.getItem("filo-intro")||matchMedia("(prefers-reduced-motion: reduce)").matches)d.intro="seen";else d.introPhase="loading"}catch(e){}`;
 
 /**
  * Light/dark switch. The new theme wipes in as a circle from the button,
