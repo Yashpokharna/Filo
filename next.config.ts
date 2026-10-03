@@ -27,8 +27,8 @@ const nextConfig: NextConfig = {
       { source: "/collections/:handle", destination: "/shop", permanent: true },
       { source: "/pages/about-us", destination: "/about", permanent: true },
       { source: "/pages/contact", destination: "/contact", permanent: true },
-      { source: "/blogs/news", destination: "/journal", permanent: true },
-      { source: "/blogs/news/:slug", destination: "/journal/:slug", permanent: true },
+      // The journal was retired; old blog links land on the homepage.
+      { source: "/blogs/:path*", destination: "/", permanent: true },
     ];
   },
 };

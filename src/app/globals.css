@@ -146,7 +146,7 @@
 }
 
 @layer components {
-  /* Long-form copy (journal, policies). */
+  /* Long-form copy (policies). */
   .prose-filo {
     font-size: 1.0625rem;
     line-height: 1.75;

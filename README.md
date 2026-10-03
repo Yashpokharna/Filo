@@ -24,7 +24,7 @@ Copy `.env.example` to `.env.local` and adjust if needed. Every variable has a w
 | Cart | `src/lib/store.ts` keeps the cart in `localStorage` and syncs it across tabs. |
 | Checkout | The bag's **Checkout** and the product page's **Buy it now** send shoppers to a Shopify cart permalink (`/cart/{variant}:{qty}`), which opens Shopify's hosted checkout with your existing payment, shipping and tax settings. |
 | Images | Product photos are resized by Shopify's CDN (`src/components/ui/image.tsx`). Brand media (hero, films, editorial) lives in `public/media`. |
-| Journal & policies | Snapshotted from Shopify into `src/data/journal.json` and `src/data/policies.json` by `npm run sync`. |
+| Policies | Snapshotted from Shopify into `src/data/policies.json` by `npm run sync`. |
 | Contact & newsletter | `POST /api/contact` emails the team through Resend when `RESEND_API_KEY` is set. Otherwise the forms open the visitor's email app. |
 | SEO | Per-page metadata, product JSON-LD, `sitemap.xml`, `robots.txt`, and redirects from old Shopify URLs (`/collections/*`, `/pages/*`, `/blogs/news/*`). |
 

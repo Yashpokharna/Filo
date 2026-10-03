@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Snapshots catalog, journal and policy content from the Shopify store into
+ * Snapshots catalog and policy content from the Shopify store into
  * src/data/*.json. The storefront reads the live catalog at request time and
  * falls back to this snapshot, so run this whenever products change in bulk:
  *
@@ -19,12 +19,6 @@ const POLICIES = [
   "terms-of-service",
   "legal-notice",
 ];
-
-const JOURNAL_IMAGES = {
-  "boot-cut-pants-for-men-fashion-trend-or-classic-style": "/media/journal/boot-cut-pants.webp",
-  "why-linen-pants-are-the-best-choice-for-summer": "/media/journal/linen-pants-summer.webp",
-  "2-way-vs-4-way-lycra-pants-which-is-better-for-men": "/media/journal/2-way-vs-4-way-lycra.webp",
-};
 
 async function get(url, type = "json") {
   const res = await fetch(url, { headers: { "user-agent": "filo-sync/1.0" } });
@@ -93,25 +87,6 @@ async function syncCatalog() {
   console.log(`catalog: ${slim.length} products, ${fresh.length} new arrivals`);
 }
 
-async function syncJournal() {
-  const atom = await get(`${STORE}/blogs/news.atom`, "text");
-  const entries = [...atom.matchAll(/<entry>([\s\S]*?)<\/entry>/g)].map(([, e]) => {
-    const link = e.match(/<link[^>]*href="([^"]+)"/)[1];
-    const slug = link.split("/").pop();
-    const html = cleanHtml(e.match(/<!\[CDATA\[([\s\S]*?)\]\]>/)[1]);
-    return {
-      slug,
-      title: e.match(/<title>([\s\S]*?)<\/title>/)[1].trim(),
-      publishedAt: e.match(/<published>(.*?)<\/published>/)[1],
-      excerpt: text(html.replace(/<h2>[\s\S]*?<\/h2>/, "")).slice(0, 180).replace(/\s\S*$/, "") + "…",
-      image: JOURNAL_IMAGES[slug] ?? null,
-      html,
-    };
-  });
-  await writeFile(path.join(OUT_DIR, "journal.json"), JSON.stringify(entries, null, 2));
-  console.log(`journal: ${entries.length} articles`);
-}
-
 async function syncPolicies() {
   const out = [];
   for (const slug of POLICIES) {
@@ -125,4 +100,4 @@ async function syncPolicies() {
 }
 
 await mkdir(OUT_DIR, { recursive: true });
-await Promise.all([syncCatalog(), syncJournal(), syncPolicies()]);
+await Promise.all([syncCatalog(), syncPolicies()]);

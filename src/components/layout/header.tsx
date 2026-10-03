@@ -40,7 +40,6 @@ export type MegaLink = { href: string; label: string; blurb: string };
 const links = [
   { label: "New In", href: "/shop?category=new" },
   { label: "Posters", href: "/posters" },
-  { label: "Journal", href: "/journal" },
 ];
 
 /** Label that rolls to a duplicate on hover. */
