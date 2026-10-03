@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Archivo, Instrument_Serif, JetBrains_Mono } from "next/font/google";
 import Script from "next/script";
+import { AppShell } from "@/components/app/install";
 import { CartDrawer } from "@/components/layout/cart-drawer";
 import { Cursor } from "@/components/layout/cursor";
 import { Footer } from "@/components/layout/footer";
@@ -37,9 +38,10 @@ export const metadata: Metadata = {
     images: [{ url: "/media/hero.webp", width: 1672, height: 941, alt: "FILO — trousers for every hour" }],
   },
   twitter: { card: "summary_large_image" },
+  appleWebApp: { capable: true, title: "FILO", statusBarStyle: "default" },
 };
 
-export const viewport: Viewport = { themeColor: "#f5f4f1" };
+export const viewport: Viewport = { themeColor: "#f5f4f1", viewportFit: "cover" };
 
 export default async function RootLayout({ children }: LayoutProps<"/">) {
   const leads = await getStyleLeads();
@@ -84,6 +86,7 @@ export default async function RootLayout({ children }: LayoutProps<"/">) {
           <SearchOverlay />
           <MobileMenu megaLinks={megaLinks} />
           <Cursor />
+          <AppShell />
         </SmoothScroll>
       </body>
     </html>

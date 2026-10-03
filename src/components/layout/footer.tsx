@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { AppIcon, InstallButton } from "@/components/app/install";
 import { Monogram } from "@/components/brand";
 import { BackToTop, FooterWordmark, StudioClock } from "@/components/layout/footer-extras";
 import { Newsletter } from "@/components/layout/newsletter";
@@ -126,6 +127,25 @@ export function Footer({ images }: { images: string[] }) {
             </div>
           </div>
         </nav>
+      </div>
+
+      {/* The app */}
+      <div className="app-hide container-x pb-14">
+        <div className="flex flex-col gap-6 rounded-3xl border border-line p-6 sm:flex-row sm:items-center md:p-8">
+          <AppIcon className="size-16" />
+          <div className="flex-1">
+            <p className="type-heading text-2xl">FILO, in your pocket.</p>
+            <p className="mt-1 text-sm text-muted">
+              Install the app — full-screen from your home screen, your bag kept, quick on any network.
+            </p>
+          </div>
+          <div className="flex flex-wrap items-center gap-4">
+            <InstallButton variant="solid" />
+            <Link href="/app" className="text-sm underline-offset-4 hover:underline">
+              How it works
+            </Link>
+          </div>
+        </div>
       </div>
 
       {/* Signature */}

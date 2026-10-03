@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { motion } from "motion/react";
 import { Wordmark } from "@/components/brand";
+import { AppIcon } from "@/components/app/install";
 import { ThemeToggle } from "@/components/layout/theme-toggle";
 import { EASE } from "@/components/motion";
 import { CloseIcon, InstagramIcon, ThreadsIcon } from "@/components/ui/icons";
@@ -62,7 +63,20 @@ export function MobileMenu({ megaLinks }: { megaLinks: MegaLink[] }) {
         </motion.div>
       </nav>
 
-      <div className="mt-10 flex items-center justify-between border-t border-line px-4 py-6 text-sm text-muted">
+      <Link
+        href="/app"
+        onClick={close}
+        className="app-hide mx-4 mt-10 flex items-center gap-3 rounded-2xl border border-line p-3 transition-colors hover:bg-fg/5"
+      >
+        <AppIcon className="size-11" />
+        <span className="flex-1">
+          <span className="block text-sm font-medium">Get the FILO app</span>
+          <span className="block text-xs text-muted">Full-screen, on your home screen</span>
+        </span>
+        <span className="pr-1 text-sm">→</span>
+      </Link>
+
+      <div className="mt-6 flex items-center justify-between border-t border-line px-4 py-6 text-sm text-muted">
         <a href={`mailto:${site.email}`}>{site.email}</a>
         <div className="flex gap-3 text-fg">
           <a href={site.social.instagram} target="_blank" rel="noreferrer" aria-label="Instagram">

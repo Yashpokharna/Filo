@@ -267,7 +267,7 @@ export function PurchasePanel({ product, siblings }: { product: Product; sibling
             animate={{ y: "0%" }}
             exit={{ y: "110%" }}
             transition={{ duration: 0.5, ease: EASE }}
-            className="fixed inset-x-0 bottom-0 z-30 flex items-center gap-3 border-t border-line bg-bg/95 px-4 pb-[max(0.75rem,env(safe-area-inset-bottom))] pt-3 backdrop-blur md:hidden"
+            className="app-bottom-offset fixed inset-x-0 bottom-0 z-30 flex items-center gap-3 border-t border-line bg-bg/95 px-4 pb-[max(0.75rem,env(safe-area-inset-bottom))] pt-3 backdrop-blur md:hidden"
           >
             <div className="min-w-0 flex-1">
               <p className="truncate text-sm font-medium">{product.name}</p>

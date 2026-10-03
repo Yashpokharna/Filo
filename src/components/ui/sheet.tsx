@@ -32,7 +32,7 @@ export function Sheet({
 }: {
   open: boolean;
   onClose: () => void;
-  side?: "right" | "left" | "top";
+  side?: "right" | "left" | "top" | "bottom";
   /** Render with the opposite theme's colours. */
   inverse?: boolean;
   label: string;
@@ -82,8 +82,8 @@ export function Sheet({
 
   if (!mounted) return null;
 
-  const offscreen = { right: { x: "100%" }, left: { x: "-100%" }, top: { y: "-100%" } }[side];
-  const onscreen = side === "top" ? { y: "0%" } : { x: "0%" };
+  const offscreen = { right: { x: "100%" }, left: { x: "-100%" }, top: { y: "-100%" }, bottom: { y: "100%" } }[side];
+  const onscreen = side === "top" || side === "bottom" ? { y: "0%" } : { x: "0%" };
 
   return createPortal(
     <AnimatePresence>
@@ -107,6 +107,7 @@ export function Sheet({
               side === "right" && "inset-y-0 right-0 w-full max-w-[460px]",
               side === "left" && "inset-y-0 left-0 w-full max-w-[520px]",
               side === "top" && "inset-x-0 top-0 max-h-[100dvh]",
+              side === "bottom" && "inset-x-0 bottom-0 max-h-[92dvh] rounded-t-3xl",
               className,
             )}
             initial={offscreen}

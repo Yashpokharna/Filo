@@ -306,3 +306,27 @@ html[data-intro-phase="docking"] .intro-logo {
   80% { transform: translate(7%, 2%); }
   100% { transform: translate(0, 0); }
 }
+
+/* Installed app (display-mode: standalone): room for the bottom tab bar. */
+@media (max-width: 47.99rem) {
+  html[data-standalone] body {
+    padding-bottom: calc(3.75rem + env(safe-area-inset-bottom));
+  }
+  html[data-standalone] .app-bottom-offset {
+    bottom: calc(3.75rem + env(safe-area-inset-bottom));
+  }
+}
+html[data-standalone] .app-hide {
+  display: none;
+}
+
+/* Gentle hover-float for the phone mockup on /app. */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0) rotate(-2deg);
+  }
+  50% {
+    transform: translateY(-14px) rotate(-0.5deg);
+  }
+}
