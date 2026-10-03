@@ -1,13 +1,25 @@
 "use client";
 
+import { useLenis } from "lenis/react";
 import { AnimatePresence, motion } from "motion/react";
-import { useEffect, useRef, type ReactNode } from "react";
+import { useEffect, useRef, useSyncExternalStore, type ReactNode } from "react";
+import { createPortal } from "react-dom";
 import { EASE } from "@/components/motion";
 import { cn } from "@/lib/format";
 
+const noop = () => () => {};
+/** False during SSR and hydration, true once mounted in the browser. */
+const useMounted = () =>
+  useSyncExternalStore(
+    noop,
+    () => true,
+    () => false,
+  );
+
 /**
- * Modal panel that slides in from an edge. Handles Escape, focus entry and
- * restore, and a simple focus trap.
+ * Modal panel that slides in from an edge. Rendered into <body> through a
+ * portal so no ancestor (sticky columns, transforms) can trap it beneath the
+ * site header. Handles Escape, scroll lock, focus entry/restore and a focus trap.
  */
 export function Sheet({
   open,
@@ -28,6 +40,8 @@ export function Sheet({
   children: ReactNode;
 }) {
   const panel = useRef<HTMLDivElement>(null);
+  const mounted = useMounted();
+  const lenis = useLenis();
 
   useEffect(() => {
     if (!open) return;
@@ -37,8 +51,11 @@ export function Sheet({
       node?.querySelectorAll<HTMLElement>(
         'a[href], button:not([disabled]), input, select, textarea, [tabindex]:not([tabindex="-1"])',
       ) ?? [];
-    const t = setTimeout(() => (node?.querySelector<HTMLElement>("[data-autofocus]") ?? focusables()[0])?.focus(), 60);
+    // Focus an explicit target if the panel asks for one, otherwise the panel
+    // itself — so no focus ring flashes on a control the visitor didn't choose.
+    const t = setTimeout(() => (node?.querySelector<HTMLElement>("[data-autofocus]") ?? node)?.focus(), 60);
 
+    lenis?.stop();
     const onKey = (e: KeyboardEvent) => {
       if (e.key === "Escape") onClose();
       if (e.key !== "Tab") return;
@@ -46,7 +63,7 @@ export function Sheet({
       if (!items.length) return;
       const first = items[0];
       const last = items[items.length - 1];
-      if (e.shiftKey && document.activeElement === first) {
+      if (e.shiftKey && (document.activeElement === first || document.activeElement === node)) {
         e.preventDefault();
         last.focus();
       } else if (!e.shiftKey && document.activeElement === last) {
@@ -58,14 +75,17 @@ export function Sheet({
     return () => {
       clearTimeout(t);
       document.removeEventListener("keydown", onKey);
+      lenis?.start();
       previous?.focus?.();
     };
-  }, [open, onClose]);
+  }, [open, onClose, lenis]);
+
+  if (!mounted) return null;
 
   const offscreen = { right: { x: "100%" }, left: { x: "-100%" }, top: { y: "-100%" } }[side];
   const onscreen = side === "top" ? { y: "0%" } : { x: "0%" };
 
-  return (
+  return createPortal(
     <AnimatePresence>
       {open && (
         <div className="fixed inset-0 z-50" role="dialog" aria-modal="true" aria-label={label}>
@@ -79,9 +99,10 @@ export function Sheet({
           />
           <motion.div
             ref={panel}
+            tabIndex={-1}
             data-lenis-prevent
             className={cn(
-              "absolute flex flex-col overflow-y-auto overscroll-contain",
+              "absolute flex flex-col overflow-y-auto overscroll-contain outline-none",
               inverse ? "inverse" : "bg-bg text-fg",
               side === "right" && "inset-y-0 right-0 w-full max-w-[460px]",
               side === "left" && "inset-y-0 left-0 w-full max-w-[520px]",
@@ -97,6 +118,7 @@ export function Sheet({
           </motion.div>
         </div>
       )}
-    </AnimatePresence>
+    </AnimatePresence>,
+    document.body,
   );
 }

@@ -53,7 +53,7 @@ export function SearchOverlay() {
       <div className="container-x pb-12 pt-5">
         <div className="flex items-center justify-between">
           <p className="type-label text-muted">Search</p>
-          <button type="button" onClick={close} className="-mr-2 grid size-10 place-items-center" aria-label="Close search">
+          <button type="button" onClick={close} className="-mr-2 grid size-10 place-items-center rounded-full transition-colors hover:bg-fg/5" aria-label="Close search">
             <CloseIcon />
           </button>
         </div>

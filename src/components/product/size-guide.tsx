@@ -8,7 +8,7 @@ export function SizeGuide({ open, onClose, sizes }: { open: boolean; onClose: ()
     <Sheet open={open} onClose={onClose} label="Size guide">
       <div className="flex items-center justify-between border-b border-line px-6 py-5">
         <p className="text-sm font-medium">Size guide</p>
-        <button type="button" onClick={onClose} className="-mr-2 grid size-10 place-items-center" aria-label="Close size guide">
+        <button type="button" onClick={onClose} className="-mr-2 grid size-10 place-items-center rounded-full transition-colors hover:bg-fg/5" aria-label="Close size guide">
           <CloseIcon />
         </button>
       </div>

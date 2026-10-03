@@ -168,7 +168,7 @@ export function Header({
             <button
               type="button"
               onClick={() => overlay.open("menu")}
-              className="-ml-2 grid size-10 place-items-center md:hidden"
+              className="-ml-2 grid size-10 place-items-center rounded-full transition-colors hover:bg-fg/5 md:hidden"
               aria-label="Open menu"
             >
               <MenuIcon />
@@ -218,7 +218,7 @@ export function Header({
             <button
               type="button"
               onClick={() => overlay.open("search")}
-              className="grid size-10 place-items-center"
+              className="grid size-10 place-items-center rounded-full transition-colors hover:bg-fg/5"
               aria-label="Search products"
             >
               <SearchIcon />

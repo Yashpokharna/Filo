@@ -22,7 +22,7 @@ export function CartDrawer() {
         <p className="text-sm font-medium">
           Your bag <span className="text-muted">({count})</span>
         </p>
-        <button type="button" onClick={close} className="-mr-2 grid size-10 place-items-center" aria-label="Close bag">
+        <button type="button" onClick={close} className="-mr-2 grid size-10 place-items-center rounded-full transition-colors hover:bg-fg/5" aria-label="Close bag">
           <CloseIcon />
         </button>
       </div>

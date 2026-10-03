@@ -45,7 +45,7 @@ export function ThemeToggle({ className }: { className?: string }) {
       onClick={toggle}
       aria-label="Toggle light and dark mode"
       title="Toggle theme"
-      className={cn("group relative grid size-10 place-items-center", className)}
+      className={cn("group relative grid size-10 place-items-center rounded-full transition-colors hover:bg-fg/5", className)}
     >
       {/* Sun (shown in dark mode) / moon (shown in light mode) — CSS-driven, no hydration flicker. */}
       <svg

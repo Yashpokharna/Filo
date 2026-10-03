@@ -21,7 +21,7 @@ export function MobileMenu({ megaLinks }: { megaLinks: MegaLink[] }) {
         <Wordmark className="h-4 w-auto" />
         <div className="flex items-center">
           <ThemeToggle />
-          <button type="button" onClick={close} className="-mr-2 grid size-10 place-items-center" aria-label="Close menu">
+          <button type="button" onClick={close} className="-mr-2 grid size-10 place-items-center rounded-full transition-colors hover:bg-fg/5" aria-label="Close menu">
             <CloseIcon />
           </button>
         </div>
