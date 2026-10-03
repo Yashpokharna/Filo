@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { ProductCarousel } from "@/components/home/carousel";
 import type { FilmShot } from "@/components/home/filo-film";
 import { Hero } from "@/components/home/hero";
@@ -11,7 +10,6 @@ import { Poster } from "@/components/posters/poster";
 import { ProductCard } from "@/components/product/product-card";
 import { Accent, SectionHeading } from "@/components/section-heading";
 import { ButtonLink, TextLink } from "@/components/ui/button";
-import { ArrowUpRight } from "@/components/ui/icons";
 import Image from "@/components/ui/image";
 import { getProducts, toSummary } from "@/lib/catalog";
 import { formatPrice } from "@/lib/format";
@@ -20,33 +18,6 @@ import { posters } from "@/lib/posters";
 export const revalidate = 900;
 
 const WORDS = ["Zero", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten", "Eleven", "Twelve"];
-
-const FABRICS = [
-  {
-    name: "Wrinkle-free",
-    detail: "FILO Ease",
-    copy: "Sharp without an iron. Easy to wash, comfortable from the first meeting to the last train home.",
-    href: "/shop?category=easy-care",
-  },
-  {
-    name: "2-way lycra",
-    detail: "Korean · Flexi · 9TO5",
-    copy: "Comfortable stretch that holds a clean, structured silhouette for office and smart-casual days.",
-    href: "/shop?category=stretch",
-  },
-  {
-    name: "4-way lycra",
-    detail: "Travel Pant",
-    copy: "Stretch in every direction with an elastic waistband. Made for long journeys.",
-    href: "/products/filo-travel-pants",
-  },
-  {
-    name: "100% linen",
-    detail: "Linen Pant · Air Short",
-    copy: "Lightweight, breathable and naturally soft — the answer to an Indian summer.",
-    href: "/shop?category=linen",
-  },
-];
 
 export default async function Home() {
   const all = await getProducts();
@@ -96,7 +67,7 @@ export default async function Home() {
       <Marquee items={["Wrinkle-free", "2-way stretch", "100% linen", "Tailored fits", "Waist 28 — 40"]} />
 
       {/* New Now */}
-      <section className="pb-28 md:pb-40" aria-labelledby="new-now">
+      <section className="pb-28 pt-16 md:pb-40 md:pt-24" aria-labelledby="new-now">
         <SectionHeading
           index="01"
           eyebrow="Just dropped"
@@ -211,7 +182,7 @@ export default async function Home() {
       <ScaleFilm />
 
       {/* Collection grid */}
-      <section className="pb-28 md:pb-40" aria-labelledby="explore">
+      <section className="pb-28 pt-16 md:pb-40 md:pt-24" aria-labelledby="explore">
         <SectionHeading
           index="05"
           eyebrow="The collection"
@@ -230,39 +201,6 @@ export default async function Home() {
             </Reveal>
           ))}
         </div>
-      </section>
-
-      {/* Fabric guide */}
-      <section className="border-t border-line py-28 md:py-40" aria-labelledby="fabrics">
-        <SectionHeading
-          index="06"
-          eyebrow="Fabric guide"
-          title={[
-            <span key="a" id="fabrics">
-              Choose by
-            </span>,
-            <Accent key="b">how you move.</Accent>,
-          ]}
-        />
-        <ul className="container-x mt-12 grid gap-3 sm:grid-cols-2 md:mt-16 lg:grid-cols-4">
-          {FABRICS.map((f, i) => (
-            <Reveal as="li" key={f.name} delay={i * 0.07}>
-              <Link
-                href={f.href}
-                className="group flex h-full flex-col rounded-sm border border-line p-6 transition-colors duration-500 hover:bg-fg hover:text-bg md:p-8"
-              >
-                <span className="font-mono text-xs opacity-60">0{i + 1}</span>
-                <span className="mt-14 type-heading text-4xl">{f.name}</span>
-                <span className="mt-1.5 text-xs opacity-60">{f.detail}</span>
-                <span className="mt-5 text-sm leading-relaxed opacity-80">{f.copy}</span>
-                <span className="mt-auto flex items-center gap-1.5 pt-8 text-sm font-medium">
-                  Shop
-                  <ArrowUpRight width={15} className="transition-transform duration-500 group-hover:rotate-45" />
-                </span>
-              </Link>
-            </Reveal>
-          ))}
-        </ul>
       </section>
 
     </>
