@@ -1,0 +1,4129 @@
+{
+  "syncedAt": "2026-10-02T11:44:33.685Z",
+  "newArrivals": [
+    "filo-ease-1",
+    "filo-ease",
+    "filo-air-linen-shorts",
+    "filo-travel-pants",
+    "filo-eco",
+    "filo-air-linen-shorts-imperial-navy",
+    "filo-air-linen-shorts-vanilla-white",
+    "filo-ease-obsidian-black",
+    "filo-9to5-imperial-navy",
+    "filo-9to5-sterling-grey"
+  ],
+  "products": [
+    {
+      "id": 9659445051651,
+      "handle": "linen-pant-white",
+      "title": "Linen Pant - White",
+      "body_html": "<p>Stay cool, comfortable, and polished with the Linen Pant. Made for breathable everyday styling, this pant gives a relaxed premium feel while maintaining a refined look for travel, casual outings, summer occasions, and smart daily wear.</p>\n<p>Crafted from premium linen for breathable comfort and timeless sophistication.<span aria-hidden=\"true\"></p>\n<p><strong>100% Linen</strong><br>Breathable • Lightweight • Naturally Soft</p>\n<ul>\n<li>Lightweight, breathable linen feel</li>\n<li>Premium relaxed yet sharp appearance</li>\n<li>Perfect for summer, travel, and casual occasions</li>\n<li>Available in versatile wardrobe colours</li>\n</ul>",
+      "product_type": "Linen",
+      "tags": [
+        "Linen Pant",
+        "Men",
+        "Pants",
+        "Summer Pants"
+      ],
+      "created_at": "2026-09-17T08:14:52+05:30",
+      "options": [
+        {
+          "name": "Size",
+          "values": [
+            "28",
+            "30",
+            "32",
+            "34",
+            "36",
+            "38",
+            "40"
+          ]
+        },
+        {
+          "name": "Color",
+          "values": [
+            "Vanilla White"
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "id": 49636919476483,
+          "title": "28 / Vanilla White",
+          "option1": "28",
+          "option2": "Vanilla White",
+          "price": "1888.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49636919509251,
+          "title": "30 / Vanilla White",
+          "option1": "30",
+          "option2": "Vanilla White",
+          "price": "1888.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49636919542019,
+          "title": "32 / Vanilla White",
+          "option1": "32",
+          "option2": "Vanilla White",
+          "price": "1888.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49636919574787,
+          "title": "34 / Vanilla White",
+          "option1": "34",
+          "option2": "Vanilla White",
+          "price": "1888.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49636919607555,
+          "title": "36 / Vanilla White",
+          "option1": "36",
+          "option2": "Vanilla White",
+          "price": "1888.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49636919640323,
+          "title": "38 / Vanilla White",
+          "option1": "38",
+          "option2": "Vanilla White",
+          "price": "1888.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49636919673091,
+          "title": "40 / Vanilla White",
+          "option1": "40",
+          "option2": "Vanilla White",
+          "price": "1888.00",
+          "compare_at_price": null,
+          "available": true
+        }
+      ],
+      "images": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/IMG_4319.png?v=1789968508",
+          "width": 1086,
+          "height": 1448
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/IMG_4322.png?v=1789968507",
+          "width": 1086,
+          "height": 1448
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/IMG_4317.png?v=1789968507",
+          "width": 1086,
+          "height": 1448
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/IMG_4318.png?v=1789968508",
+          "width": 1086,
+          "height": 1448
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/IMG_4320.png?v=1789968508",
+          "width": 1086,
+          "height": 1448
+        }
+      ]
+    },
+    {
+      "id": 9659444625667,
+      "handle": "linen-pant-imperial-navy",
+      "title": "Linen Pant - Imperial Navy",
+      "body_html": "<p>Stay cool, comfortable, and polished with the Linen Pant. Made for breathable everyday styling, this pant gives a relaxed premium feel while maintaining a refined look for travel, casual outings, summer occasions, and smart daily wear.</p>\n<p>Crafted from premium linen for breathable comfort and timeless sophistication.<span aria-hidden=\"true\"></p>\n<p><strong>100% Linen</strong><br>Breathable • Lightweight • Naturally Soft</p>\n<ul>\n<li>Lightweight, breathable linen feel</li>\n<li>Premium relaxed yet sharp appearance</li>\n<li>Perfect for summer, travel, and casual occasions</li>\n<li>Available in versatile wardrobe colours</li>\n</ul>",
+      "product_type": "Linen",
+      "tags": [
+        "Linen Pant",
+        "Men",
+        "Pants",
+        "Summer Pants"
+      ],
+      "created_at": "2026-09-17T08:14:45+05:30",
+      "options": [
+        {
+          "name": "Size",
+          "values": [
+            "28",
+            "30",
+            "32",
+            "34",
+            "36",
+            "38",
+            "40"
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "id": 49636918362371,
+          "title": "28",
+          "option1": "28",
+          "option2": null,
+          "price": "1888.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49636918395139,
+          "title": "30",
+          "option1": "30",
+          "option2": null,
+          "price": "1888.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49636918427907,
+          "title": "32",
+          "option1": "32",
+          "option2": null,
+          "price": "1888.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49636918460675,
+          "title": "34",
+          "option1": "34",
+          "option2": null,
+          "price": "1888.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49636918493443,
+          "title": "36",
+          "option1": "36",
+          "option2": null,
+          "price": "1888.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49636918526211,
+          "title": "38",
+          "option1": "38",
+          "option2": null,
+          "price": "1888.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49636918558979,
+          "title": "40",
+          "option1": "40",
+          "option2": null,
+          "price": "1888.00",
+          "compare_at_price": null,
+          "available": true
+        }
+      ],
+      "images": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/IMG_4325.png?v=1789990924",
+          "width": 1086,
+          "height": 1448
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/IMG_4324.png?v=1789990925",
+          "width": 1086,
+          "height": 1448
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/IMG_4326.png?v=1789990925",
+          "width": 1086,
+          "height": 1448
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/IMG_4329.png?v=1789990924",
+          "width": 1086,
+          "height": 1448
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/IMG_4327.png?v=1789990924",
+          "width": 1086,
+          "height": 1448
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/IMG_4328.png?v=1789990922",
+          "width": 1086,
+          "height": 1448
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/IMG_4323.png?v=1789990925",
+          "width": 1086,
+          "height": 1448
+        }
+      ]
+    },
+    {
+      "id": 9659444134147,
+      "handle": "korean-pant-imperial-navy",
+      "title": "Korean Pant - Imperial Navy",
+      "body_html": "<p>Upgrade your everyday wardrobe with the Korean Pant, designed for a clean modern look and flexible all-day comfort. The 2-way lycra fabric gives comfortable stretch while keeping the pant structured and stylish for casual, office, and semi-formal wear.</p>\n<ul>\n<li>Modern Korean-inspired fit</li>\n<li>Comfortable 2-way stretch fabric</li>\n<li>Ideal for daily wear, office wear, and smart casual looks</li>\n<li>Available in multiple classic colours</li>\n</ul>",
+      "product_type": "Korean 2 Way Lycra",
+      "tags": [
+        "2 Way Lycra",
+        "Korean Pant",
+        "Men",
+        "Pants",
+        "Stretch Pants"
+      ],
+      "created_at": "2026-09-17T08:14:39+05:30",
+      "options": [
+        {
+          "name": "Size",
+          "values": [
+            "28",
+            "30",
+            "32",
+            "34",
+            "36",
+            "38",
+            "40"
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "id": 49636917412099,
+          "title": "28",
+          "option1": "28",
+          "option2": null,
+          "price": "1444.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49636917444867,
+          "title": "30",
+          "option1": "30",
+          "option2": null,
+          "price": "1444.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49636917477635,
+          "title": "32",
+          "option1": "32",
+          "option2": null,
+          "price": "1444.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49636917510403,
+          "title": "34",
+          "option1": "34",
+          "option2": null,
+          "price": "1444.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49636917543171,
+          "title": "36",
+          "option1": "36",
+          "option2": null,
+          "price": "1444.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49636917575939,
+          "title": "38",
+          "option1": "38",
+          "option2": null,
+          "price": "1444.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49636917608707,
+          "title": "40",
+          "option1": "40",
+          "option2": null,
+          "price": "1444.00",
+          "compare_at_price": null,
+          "available": true
+        }
+      ],
+      "images": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/IMG_4245.png?v=1789799986",
+          "width": 1086,
+          "height": 1448
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/IMG_4246.png?v=1789799986",
+          "width": 1086,
+          "height": 1448
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/IMG_4247.png?v=1789799986",
+          "width": 1086,
+          "height": 1448
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/IMG_4248.png?v=1789799986",
+          "width": 1086,
+          "height": 1448
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/IMG_4249.png?v=1789799986",
+          "width": 1086,
+          "height": 1448
+        }
+      ]
+    },
+    {
+      "id": 9659443347715,
+      "handle": "korean-pant-sterling-grey",
+      "title": "Korean Pant - Sterling Grey",
+      "body_html": "<p>Upgrade your everyday wardrobe with the Korean Pant, designed for a clean modern look and flexible all-day comfort. The 2-way lycra fabric gives comfortable stretch while keeping the pant structured and stylish for casual, office, and semi-formal wear.</p>\n<ul>\n<li>Modern Korean-inspired fit</li>\n<li>Comfortable 2-way stretch fabric</li>\n<li>Ideal for daily wear, office wear, and smart casual looks</li>\n<li>Available in multiple classic colours</li>\n</ul>",
+      "product_type": "Korean 2 Way Lycra",
+      "tags": [
+        "2 Way Lycra",
+        "Korean Pant",
+        "Men",
+        "Pants",
+        "Stretch Pants"
+      ],
+      "created_at": "2026-09-17T08:14:32+05:30",
+      "options": [
+        {
+          "name": "Size",
+          "values": [
+            "28",
+            "30",
+            "32",
+            "34",
+            "36",
+            "38",
+            "40"
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "id": 49636916232451,
+          "title": "28",
+          "option1": "28",
+          "option2": null,
+          "price": "1444.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49636916265219,
+          "title": "30",
+          "option1": "30",
+          "option2": null,
+          "price": "1444.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49636916297987,
+          "title": "32",
+          "option1": "32",
+          "option2": null,
+          "price": "1444.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49636916330755,
+          "title": "34",
+          "option1": "34",
+          "option2": null,
+          "price": "1444.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49636916363523,
+          "title": "36",
+          "option1": "36",
+          "option2": null,
+          "price": "1444.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49636916396291,
+          "title": "38",
+          "option1": "38",
+          "option2": null,
+          "price": "1444.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49636916429059,
+          "title": "40",
+          "option1": "40",
+          "option2": null,
+          "price": "1444.00",
+          "compare_at_price": null,
+          "available": true
+        }
+      ],
+      "images": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/IMG_4261.png?v=1789800296",
+          "width": 1086,
+          "height": 1448
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/IMG_4260.png?v=1789800295",
+          "width": 1086,
+          "height": 1448
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/IMG_4262.png?v=1789800298",
+          "width": 1086,
+          "height": 1448
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/IMG_4263.png?v=1789800298",
+          "width": 1086,
+          "height": 1448
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/IMG_4264.png?v=1789800298",
+          "width": 1086,
+          "height": 1448
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/IMG_4265.png?v=1789800298",
+          "width": 1086,
+          "height": 1448
+        }
+      ]
+    },
+    {
+      "id": 9659441774851,
+      "handle": "korean-pant-champagne-sand",
+      "title": "Korean Pant - Champagne Sand",
+      "body_html": "<p>Upgrade your everyday wardrobe with the Korean Pant, designed for a clean modern look and flexible all-day comfort. The 2-way lycra fabric gives comfortable stretch while keeping the pant structured and stylish for casual, office, and semi-formal wear.</p>\n<ul>\n<li>Modern Korean-inspired fit</li>\n<li>Comfortable 2-way stretch fabric</li>\n<li>Ideal for daily wear, office wear, and smart casual looks</li>\n<li>Available in multiple classic colours</li>\n</ul>",
+      "product_type": "Korean 2 Way Lycra",
+      "tags": [
+        "2 Way Lycra",
+        "Korean Pant",
+        "Men",
+        "Pants",
+        "Stretch Pants"
+      ],
+      "created_at": "2026-09-17T08:14:26+05:30",
+      "options": [
+        {
+          "name": "Size",
+          "values": [
+            "28",
+            "30",
+            "32",
+            "34",
+            "36",
+            "38",
+            "40"
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "id": 49636913971459,
+          "title": "28",
+          "option1": "28",
+          "option2": null,
+          "price": "1444.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49636914004227,
+          "title": "30",
+          "option1": "30",
+          "option2": null,
+          "price": "1444.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49636914036995,
+          "title": "32",
+          "option1": "32",
+          "option2": null,
+          "price": "1444.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49636914069763,
+          "title": "34",
+          "option1": "34",
+          "option2": null,
+          "price": "1444.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49636914102531,
+          "title": "36",
+          "option1": "36",
+          "option2": null,
+          "price": "1444.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49636914135299,
+          "title": "38",
+          "option1": "38",
+          "option2": null,
+          "price": "1444.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49636914168067,
+          "title": "40",
+          "option1": "40",
+          "option2": null,
+          "price": "1444.00",
+          "compare_at_price": null,
+          "available": true
+        }
+      ],
+      "images": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/IMG_4253.png?v=1789800118",
+          "width": 1086,
+          "height": 1448
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/IMG_4254.png?v=1789800117",
+          "width": 1086,
+          "height": 1448
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/IMG_4252.png?v=1789800116",
+          "width": 1086,
+          "height": 1448
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/IMG_4256.png?v=1789800118",
+          "width": 1086,
+          "height": 1448
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/IMG_4255.png?v=1789800117",
+          "width": 1086,
+          "height": 1448
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/IMG_4257.png?v=1789800118",
+          "width": 1086,
+          "height": 1448
+        }
+      ]
+    },
+    {
+      "id": 9659441348867,
+      "handle": "filo-flexi-trouser-imperial-navy",
+      "title": "FILO Flexi Trouser - Imperial Navy",
+      "body_html": "<p>The Flexi trouser is built for everyday comfort with a modern stretch fit. Its flexible lycra fabric moves with you, making it a reliable choice for office hours, casual plans, and all-day wear without compromising on style.</p>\n<ul>\n<li>Flexible lycra comfort fit</li>\n<li>Great for office, casual, and everyday styling</li>\n<li>Modern clean look with stretch support</li>\n<li>Available in wide colour options</li>\n</ul>",
+      "product_type": "Flexi 2 Way Lycra",
+      "tags": [
+        "Flexi Pant",
+        "Lycra Pant",
+        "Men",
+        "Pants",
+        "Stretch Pants"
+      ],
+      "created_at": "2026-09-17T08:14:20+05:30",
+      "options": [
+        {
+          "name": "Size",
+          "values": [
+            "28",
+            "30",
+            "32",
+            "34",
+            "36",
+            "38",
+            "40"
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "id": 49636912922883,
+          "title": "28",
+          "option1": "28",
+          "option2": null,
+          "price": "1666.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49636912955651,
+          "title": "30",
+          "option1": "30",
+          "option2": null,
+          "price": "1666.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49636912988419,
+          "title": "32",
+          "option1": "32",
+          "option2": null,
+          "price": "1666.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49636913021187,
+          "title": "34",
+          "option1": "34",
+          "option2": null,
+          "price": "1666.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49636913053955,
+          "title": "36",
+          "option1": "36",
+          "option2": null,
+          "price": "1666.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49636913086723,
+          "title": "38",
+          "option1": "38",
+          "option2": null,
+          "price": "1666.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49636913119491,
+          "title": "40",
+          "option1": "40",
+          "option2": null,
+          "price": "1666.00",
+          "compare_at_price": null,
+          "available": true
+        }
+      ],
+      "images": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/STRICT_color_swap_only_-_two_changes_happening_ch-1786382991332.png?v=1787118084",
+          "width": 1792,
+          "height": 2400
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/STRICT_color_swap_only_-_two_changes_happening_ch-1786382989076.png?v=1787118083",
+          "width": 1792,
+          "height": 2400
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/STRICT_color_swap_only_-_two_changes_happening_ch-1786382993932.png?v=1787118083",
+          "width": 1792,
+          "height": 2400
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/STRICT_color_swap_only_-_two_changes_happening_ch-1786382985661.png?v=1787118084",
+          "width": 1792,
+          "height": 2400
+        }
+      ]
+    },
+    {
+      "id": 9659440988419,
+      "handle": "filo-flexi-trouser-obsidian-black",
+      "title": "FILO Flexi Trouser - Obsidian Black",
+      "body_html": "<p>The Flexi trouser is built for everyday comfort with a modern stretch fit. Its flexible lycra fabric moves with you, making it a reliable choice for office hours, casual plans, and all-day wear without compromising on style.</p>\n<ul>\n<li>Flexible lycra comfort fit</li>\n<li>Great for office, casual, and everyday styling</li>\n<li>Modern clean look with stretch support</li>\n<li>Available in wide colour options</li>\n</ul>",
+      "product_type": "Flexi 2 Way Lycra",
+      "tags": [
+        "Flexi Pant",
+        "Lycra Pant",
+        "Men",
+        "Pants",
+        "Stretch Pants"
+      ],
+      "created_at": "2026-09-17T08:14:14+05:30",
+      "options": [
+        {
+          "name": "Size",
+          "values": [
+            "28",
+            "30",
+            "32",
+            "34",
+            "36",
+            "38",
+            "40"
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "id": 49636912169219,
+          "title": "28",
+          "option1": "28",
+          "option2": null,
+          "price": "1666.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49636912201987,
+          "title": "30",
+          "option1": "30",
+          "option2": null,
+          "price": "1666.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49636912234755,
+          "title": "32",
+          "option1": "32",
+          "option2": null,
+          "price": "1666.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49636912267523,
+          "title": "34",
+          "option1": "34",
+          "option2": null,
+          "price": "1666.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49636912300291,
+          "title": "36",
+          "option1": "36",
+          "option2": null,
+          "price": "1666.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49636912333059,
+          "title": "38",
+          "option1": "38",
+          "option2": null,
+          "price": "1666.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49636912365827,
+          "title": "40",
+          "option1": "40",
+          "option2": null,
+          "price": "1666.00",
+          "compare_at_price": null,
+          "available": true
+        }
+      ],
+      "images": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/Color_swap_only_Change_grey_pant_color_to_BLACK_o-1786381088779.png?v=1787118084",
+          "width": 1792,
+          "height": 2400
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/Color_swap_only_Change_grey_pant_color_to_BLACK_o-1786381091244.png?v=1787118083",
+          "width": 1792,
+          "height": 2400
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/Color_swap_only_Change_grey_pant_color_to_BLACK_o-1786381093648.png?v=1787118083",
+          "width": 1792,
+          "height": 2400
+        }
+      ]
+    },
+    {
+      "id": 9659440529667,
+      "handle": "filo-flexi-trouser-founders-edition-rose-blush",
+      "title": "FILO Flexi Trouser  Founder's Edition - Rose Blush",
+      "body_html": "<p><strong>The FILO Flexi Trouser — Founder's Edition</strong> is a tribute to the vision that inspired FILO. Crafted in a strictly limited run, this exclusive release combines premium stretch lycra fabric with a refined, modern silhouette to deliver exceptional comfort and effortless style. Designed for those who appreciate timeless essentials, the Founder's Edition is made to move seamlessly from work to weekends while reflecting the quality and attention to detail that define the FILO philosophy.</p>\n<p><strong>Key Features</strong></p>\n<ul>\n<li>\n<p>Exclusive <strong>Founder's Edition</strong> limited release</p>\n</li>\n<li>\n<p>Premium stretch lycra fabric for superior comfort and flexibility</p>\n</li>\n<li>\n<p>Tailored comfort fit with a clean, contemporary silhouette</p>\n</li>\n<li>\n<p>Lightweight, breathable, and built for all-day wear</p>\n</li>\n<li>\n<p>Versatile styling for office, travel, and everyday occasions</p>\n</li>\n<li>\n<p>Crafted with signature FILO quality and attention to detail</p>\n</li>\n</ul>",
+      "product_type": "Flexi 2 Way Lycra",
+      "tags": [
+        "Flexi Pant",
+        "Lycra Pant",
+        "Men",
+        "Pants",
+        "Stretch Pants"
+      ],
+      "created_at": "2026-09-17T08:14:07+05:30",
+      "options": [
+        {
+          "name": "Size",
+          "values": [
+            "28",
+            "30",
+            "32",
+            "34",
+            "36",
+            "38",
+            "40"
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "id": 49636911087875,
+          "title": "28",
+          "option1": "28",
+          "option2": null,
+          "price": "1666.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49636911120643,
+          "title": "30",
+          "option1": "30",
+          "option2": null,
+          "price": "1666.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49636911153411,
+          "title": "32",
+          "option1": "32",
+          "option2": null,
+          "price": "1666.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49636911186179,
+          "title": "34",
+          "option1": "34",
+          "option2": null,
+          "price": "1666.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49636911218947,
+          "title": "36",
+          "option1": "36",
+          "option2": null,
+          "price": "1666.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49636911251715,
+          "title": "38",
+          "option1": "38",
+          "option2": null,
+          "price": "1666.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49636911284483,
+          "title": "40",
+          "option1": "40",
+          "option2": null,
+          "price": "1666.00",
+          "compare_at_price": null,
+          "available": true
+        }
+      ],
+      "images": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/ChatGPTImageJul5_2026_10_43_01PM.png?v=1783273513",
+          "width": 1024,
+          "height": 1536
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/ChatGPTImageJul5_2026_10_45_19PM.png?v=1783273513",
+          "width": 988,
+          "height": 1591
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/ChatGPTImageJul5_2026_10_55_02PM.png?v=1783273513",
+          "width": 941,
+          "height": 1672
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/ChatGPTImageJul5_2026_10_34_09PM.png?v=1783273513",
+          "width": 1023,
+          "height": 1537
+        }
+      ]
+    },
+    {
+      "id": 9659439972611,
+      "handle": "filo-9to5-sterling-grey",
+      "title": "FILO 9TO5 - Sterling Grey",
+      "body_html": "<p><strong>Fabric</strong> – Premium 2-Way Stretch<br><strong>Fit</strong> – Smart Corporate Fit<br><strong>Stretch</strong> – Flexible 2-Way Comfort<br><strong>Stitching</strong> – Premium Reinforced Stitching<br><strong>Finish</strong> – Clean, Structured &amp; Office-Ready<br><strong>Occasion</strong> – Workwear, Meetings &amp; Everyday Formal Wear</p>\n<h4>Description</h4>\n<p><strong>FILO 9TO5</strong> is built for men who want to stay sharp and comfortable throughout the working day. Crafted from premium <strong>2-way stretch fabric</strong>, it offers easy movement while maintaining a clean and structured silhouette.</p>\n<p>Finished with <strong>premium stitching and refined detailing</strong>, the trouser is designed to deliver a polished look from morning meetings to after-office plans. Its smart fit makes it easy to pair with shirts, polos, blazers or formal shoes.</p>\n<p><strong>Professional in appearance. Flexible in comfort. Made for your 9TO5 and beyond.</strong></p>",
+      "product_type": "",
+      "tags": [
+        "everyday"
+      ],
+      "created_at": "2026-09-17T08:14:01+05:30",
+      "options": [
+        {
+          "name": "Size",
+          "values": [
+            "28",
+            "30",
+            "32",
+            "34",
+            "36",
+            "38",
+            "40"
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "id": 49636910235907,
+          "title": "28",
+          "option1": "28",
+          "option2": null,
+          "price": "888.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49636910268675,
+          "title": "30",
+          "option1": "30",
+          "option2": null,
+          "price": "888.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49636910301443,
+          "title": "32",
+          "option1": "32",
+          "option2": null,
+          "price": "888.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49636910334211,
+          "title": "34",
+          "option1": "34",
+          "option2": null,
+          "price": "888.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49636910366979,
+          "title": "36",
+          "option1": "36",
+          "option2": null,
+          "price": "888.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49636910399747,
+          "title": "38",
+          "option1": "38",
+          "option2": null,
+          "price": "888.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49636910432515,
+          "title": "40",
+          "option1": "40",
+          "option2": null,
+          "price": "888.00",
+          "compare_at_price": null,
+          "available": true
+        }
+      ],
+      "images": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/IMG_3941.png?v=1789287182",
+          "width": 1122,
+          "height": 1402
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/IMG_3937.png?v=1789287181",
+          "width": 1122,
+          "height": 1402
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/IMG_3936.png?v=1789287142",
+          "width": 1122,
+          "height": 1402
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/IMG_3938.png?v=1789287181",
+          "width": 1122,
+          "height": 1402
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/IMG_3939.png?v=1789287181",
+          "width": 1122,
+          "height": 1402
+        }
+      ]
+    },
+    {
+      "id": 9659439382787,
+      "handle": "filo-9to5-imperial-navy",
+      "title": "FILO 9TO5 - Imperial Navy",
+      "body_html": "<p><strong>Fabric</strong> – Premium 2-Way Stretch<br><strong>Fit</strong> – Smart Corporate Fit<br><strong>Stretch</strong> – Flexible 2-Way Comfort<br><strong>Stitching</strong> – Premium Reinforced Stitching<br><strong>Finish</strong> – Clean, Structured &amp; Office-Ready<br><strong>Occasion</strong> – Workwear, Meetings &amp; Everyday Formal Wear</p>\n<h4>Description</h4>\n<p><strong>FILO 9TO5</strong> is built for men who want to stay sharp and comfortable throughout the working day. Crafted from premium <strong>2-way stretch fabric</strong>, it offers easy movement while maintaining a clean and structured silhouette.</p>\n<p>Finished with <strong>premium stitching and refined detailing</strong>, the trouser is designed to deliver a polished look from morning meetings to after-office plans. Its smart fit makes it easy to pair with shirts, polos, blazers or formal shoes.</p>\n<p><strong>Professional in appearance. Flexible in comfort. Made for your 9TO5 and beyond.</strong></p>",
+      "product_type": "",
+      "tags": [
+        "everyday"
+      ],
+      "created_at": "2026-09-17T08:13:54+05:30",
+      "options": [
+        {
+          "name": "Size",
+          "values": [
+            "28",
+            "30",
+            "32",
+            "34",
+            "36",
+            "38",
+            "40"
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "id": 49636909351171,
+          "title": "28",
+          "option1": "28",
+          "option2": null,
+          "price": "888.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49636909383939,
+          "title": "30",
+          "option1": "30",
+          "option2": null,
+          "price": "888.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49636909416707,
+          "title": "32",
+          "option1": "32",
+          "option2": null,
+          "price": "888.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49636909449475,
+          "title": "34",
+          "option1": "34",
+          "option2": null,
+          "price": "888.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49636909482243,
+          "title": "36",
+          "option1": "36",
+          "option2": null,
+          "price": "888.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49636909515011,
+          "title": "38",
+          "option1": "38",
+          "option2": null,
+          "price": "888.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49636909547779,
+          "title": "40",
+          "option1": "40",
+          "option2": null,
+          "price": "888.00",
+          "compare_at_price": null,
+          "available": true
+        }
+      ],
+      "images": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/IMG_3933.png?v=1789287142",
+          "width": 1122,
+          "height": 1402
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/IMG_3930.png?v=1789287142",
+          "width": 1121,
+          "height": 1403
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/IMG_3929.png?v=1789287142",
+          "width": 1122,
+          "height": 1402
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/IMG_3931.png?v=1789287142",
+          "width": 1122,
+          "height": 1402
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/IMG_3932.png?v=1789287142",
+          "width": 1122,
+          "height": 1402
+        }
+      ]
+    },
+    {
+      "id": 9659438924035,
+      "handle": "filo-ease-obsidian-black",
+      "title": "FILO - Ease - Obsidian Black",
+      "body_html": "<p><strong>Wrinkle-Free • No Iron Required • Easy Wash • All-Day Comfort</strong><br></p>\n<p>Designed for effortless everyday wear. Crafted from wrinkle-free fabric, FILO Ease keeps you looking sharp without the need for ironing. Easy to wash, comfortable for all-day wear, and made to keep up with your everyday routine.</p>",
+      "product_type": "Ease",
+      "tags": [],
+      "created_at": "2026-09-17T08:13:48+05:30",
+      "options": [
+        {
+          "name": "Size",
+          "values": [
+            "28",
+            "30",
+            "32",
+            "34",
+            "36",
+            "38",
+            "40"
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "id": 49636908400899,
+          "title": "28",
+          "option1": "28",
+          "option2": null,
+          "price": "1777.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49636908433667,
+          "title": "30",
+          "option1": "30",
+          "option2": null,
+          "price": "1777.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49636908466435,
+          "title": "32",
+          "option1": "32",
+          "option2": null,
+          "price": "1777.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49636908499203,
+          "title": "34",
+          "option1": "34",
+          "option2": null,
+          "price": "1777.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49636908531971,
+          "title": "36",
+          "option1": "36",
+          "option2": null,
+          "price": "1777.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49636908564739,
+          "title": "38",
+          "option1": "38",
+          "option2": null,
+          "price": "1777.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49636908597507,
+          "title": "40",
+          "option1": "40",
+          "option2": null,
+          "price": "1777.00",
+          "compare_at_price": null,
+          "available": true
+        }
+      ],
+      "images": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/IMG_4156.png?v=1789703839",
+          "width": 1086,
+          "height": 1448
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/IMG_4160.png?v=1789703839",
+          "width": 1086,
+          "height": 1448
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/IMG_4157.png?v=1789703839",
+          "width": 1086,
+          "height": 1448
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/IMG_4158.png?v=1789703838",
+          "width": 1086,
+          "height": 1448
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/IMG_4159.png?v=1789703839",
+          "width": 1086,
+          "height": 1448
+        }
+      ]
+    },
+    {
+      "id": 9659438563587,
+      "handle": "filo-classic-vanilla-white",
+      "title": "FILO - Classic - Vanilla White",
+      "body_html": "<p>100% Premium Cotton <strong>Fit:</strong> Straight-leg, Regular <strong>Color:</strong> Ivory White <strong>Waistband:</strong> Comfortable mid-rise with belt loops <strong>Pockets:</strong> Two side pockets, two back welt pockets <strong>Closure:</strong> Button &amp; zip front <strong>Length:</strong> Full-length tailored cut. </p>",
+      "product_type": "",
+      "tags": [],
+      "created_at": "2026-09-17T08:13:41+05:30",
+      "options": [
+        {
+          "name": "Size",
+          "values": [
+            "28",
+            "30",
+            "32",
+            "34",
+            "36",
+            "38",
+            "40"
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "id": 49636907778307,
+          "title": "28",
+          "option1": "28",
+          "option2": null,
+          "price": "1400.00",
+          "compare_at_price": null,
+          "available": false
+        },
+        {
+          "id": 49636907811075,
+          "title": "30",
+          "option1": "30",
+          "option2": null,
+          "price": "1400.00",
+          "compare_at_price": null,
+          "available": false
+        },
+        {
+          "id": 49636907843843,
+          "title": "32",
+          "option1": "32",
+          "option2": null,
+          "price": "1400.00",
+          "compare_at_price": null,
+          "available": false
+        },
+        {
+          "id": 49636907876611,
+          "title": "34",
+          "option1": "34",
+          "option2": null,
+          "price": "1400.00",
+          "compare_at_price": null,
+          "available": false
+        },
+        {
+          "id": 49636907909379,
+          "title": "36",
+          "option1": "36",
+          "option2": null,
+          "price": "1400.00",
+          "compare_at_price": null,
+          "available": false
+        },
+        {
+          "id": 49636907942147,
+          "title": "38",
+          "option1": "38",
+          "option2": null,
+          "price": "1400.00",
+          "compare_at_price": null,
+          "available": false
+        },
+        {
+          "id": 49636907974915,
+          "title": "40",
+          "option1": "40",
+          "option2": null,
+          "price": "1400.00",
+          "compare_at_price": null,
+          "available": false
+        }
+      ],
+      "images": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/Professional_fashion_lookbook_photograph_dynamic_-1787205982927.png?v=1787205998",
+          "width": 1792,
+          "height": 2400
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/Professional_fashion_lookbook_photograph_right_si-1787205772254.png?v=1787205956",
+          "width": 1792,
+          "height": 2400
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/Professional_fashion_lookbook_photograph_of_a_youn-1787205507739.png?v=1787205956",
+          "width": 1792,
+          "height": 2400
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/Professional_fashion_lookbook_photograph_back_vie-1787205502673.png?v=1787205956",
+          "width": 1792,
+          "height": 2400
+        }
+      ]
+    },
+    {
+      "id": 9659437973763,
+      "handle": "filo-buckle-pants-style-2-champagne-sand",
+      "title": "FILO Buckle Pants Style 2 - Champagne Sand",
+      "body_html": "<p>A refined expression of modern tailoring, crafted with precision and attention to detail. Featuring a distinctive buckle-style waistband and a thoughtfully structured silhouette, these pants blend contemporary design with timeless sophistication. Engineered for elevated everyday wear, they deliver a polished look without compromising on comfort.</p><ul>\n<li>Tailored Craftsmanship</li>\n<li>Modern Structure</li>\n<li>Effortless Versatility</li>\n<li>Elevated Everyday Style</li>\n</ul>",
+      "product_type": "Pants",
+      "tags": [
+        "buckle",
+        "everyday",
+        "pants",
+        "premium",
+        "tailored"
+      ],
+      "created_at": "2026-09-17T08:13:34+05:30",
+      "options": [
+        {
+          "name": "Size",
+          "values": [
+            "28",
+            "30",
+            "32",
+            "34",
+            "36",
+            "38",
+            "40"
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "id": 49636906795267,
+          "title": "28",
+          "option1": "28",
+          "option2": null,
+          "price": "1888.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49636906828035,
+          "title": "30",
+          "option1": "30",
+          "option2": null,
+          "price": "1888.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49636906860803,
+          "title": "32",
+          "option1": "32",
+          "option2": null,
+          "price": "1888.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49636906893571,
+          "title": "34",
+          "option1": "34",
+          "option2": null,
+          "price": "1888.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49636906926339,
+          "title": "36",
+          "option1": "36",
+          "option2": null,
+          "price": "1888.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49636906959107,
+          "title": "38",
+          "option1": "38",
+          "option2": null,
+          "price": "1888.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49636906991875,
+          "title": "40",
+          "option1": "40",
+          "option2": null,
+          "price": "1888.00",
+          "compare_at_price": null,
+          "available": true
+        }
+      ],
+      "images": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/Edit_this_e-commerce_three-quarter_view_photo_Kee-1786359983864.png?v=1786557873",
+          "width": 1792,
+          "height": 2400
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/E-commerce_product_photography_FRONT_VIEW_of_a_ma-1786359912904.png?v=1786557873",
+          "width": 1792,
+          "height": 2400
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/E-commerce_product_photography_sidethree-quarter-1786359724942.png?v=1786557873",
+          "width": 1792,
+          "height": 2400
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/Edit_this_e-commerce_back-view_photo_of_khakibeig-1786359897959.png?v=1786557873",
+          "width": 1792,
+          "height": 2400
+        }
+      ]
+    },
+    {
+      "id": 9659437121795,
+      "handle": "filo-buckle-pants-style-2-vanilla-white",
+      "title": "FILO Buckle Pants Style 2 - Vanilla White",
+      "body_html": "<p>A refined expression of modern tailoring, crafted with precision and attention to detail. Featuring a distinctive buckle-style waistband and a thoughtfully structured silhouette, these pants blend contemporary design with timeless sophistication. Engineered for elevated everyday wear, they deliver a polished look without compromising on comfort.</p><ul>\n<li>Tailored Craftsmanship</li>\n<li>Modern Structure</li>\n<li>Effortless Versatility</li>\n<li>Elevated Everyday Style</li>\n</ul>",
+      "product_type": "Pants",
+      "tags": [
+        "buckle",
+        "everyday",
+        "pants",
+        "premium",
+        "tailored"
+      ],
+      "created_at": "2026-09-17T08:13:28+05:30",
+      "options": [
+        {
+          "name": "Size",
+          "values": [
+            "28",
+            "30",
+            "32",
+            "34",
+            "36",
+            "38",
+            "40"
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "id": 49636905517315,
+          "title": "28",
+          "option1": "28",
+          "option2": null,
+          "price": "1888.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49636905550083,
+          "title": "30",
+          "option1": "30",
+          "option2": null,
+          "price": "1888.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49636905582851,
+          "title": "32",
+          "option1": "32",
+          "option2": null,
+          "price": "1888.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49636905615619,
+          "title": "34",
+          "option1": "34",
+          "option2": null,
+          "price": "1888.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49636905648387,
+          "title": "36",
+          "option1": "36",
+          "option2": null,
+          "price": "1888.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49636905681155,
+          "title": "38",
+          "option1": "38",
+          "option2": null,
+          "price": "1888.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49636905713923,
+          "title": "40",
+          "option1": "40",
+          "option2": null,
+          "price": "1888.00",
+          "compare_at_price": null,
+          "available": true
+        }
+      ],
+      "images": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/E-commerce_product_photography_full_body_FRONT_VI-1786364868200.png?v=1786557814",
+          "width": 1792,
+          "height": 2400
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/E-commerce_product_photography_SIDE_VIEW_CLOSE-UP-1786364871000.png?v=1786557814",
+          "width": 1792,
+          "height": 2400
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/E-commerce_product_photography_FRONT_CLOSE-UP_VIE-1786364873809.png?v=1786557814",
+          "width": 1792,
+          "height": 2400
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/E-commerce_product_photography_full_body_BACK_VIE-1786364866532.png?v=1786557814",
+          "width": 1792,
+          "height": 2400
+        }
+      ]
+    },
+    {
+      "id": 9659435712771,
+      "handle": "filo-buckle-pants-style-2-imperial-navy",
+      "title": "FILO Buckle Pants Style 2 - Imperial Navy",
+      "body_html": "<p>A refined expression of modern tailoring, crafted with precision and attention to detail. Featuring a distinctive buckle-style waistband and a thoughtfully structured silhouette, these pants blend contemporary design with timeless sophistication. Engineered for elevated everyday wear, they deliver a polished look without compromising on comfort.</p><ul>\n<li>Tailored Craftsmanship</li>\n<li>Modern Structure</li>\n<li>Effortless Versatility</li>\n<li>Elevated Everyday Style</li>\n</ul>",
+      "product_type": "Pants",
+      "tags": [
+        "buckle",
+        "everyday",
+        "pants",
+        "premium",
+        "tailored"
+      ],
+      "created_at": "2026-09-17T08:13:21+05:30",
+      "options": [
+        {
+          "name": "Size",
+          "values": [
+            "28",
+            "30",
+            "32",
+            "34",
+            "36",
+            "38",
+            "40"
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "id": 49636903649539,
+          "title": "28",
+          "option1": "28",
+          "option2": null,
+          "price": "1888.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49636903682307,
+          "title": "30",
+          "option1": "30",
+          "option2": null,
+          "price": "1888.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49636903715075,
+          "title": "32",
+          "option1": "32",
+          "option2": null,
+          "price": "1888.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49636903747843,
+          "title": "34",
+          "option1": "34",
+          "option2": null,
+          "price": "1888.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49636903780611,
+          "title": "36",
+          "option1": "36",
+          "option2": null,
+          "price": "1888.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49636903813379,
+          "title": "38",
+          "option1": "38",
+          "option2": null,
+          "price": "1888.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49636903846147,
+          "title": "40",
+          "option1": "40",
+          "option2": null,
+          "price": "1888.00",
+          "compare_at_price": null,
+          "available": true
+        }
+      ],
+      "images": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/E-commerce_product_photography_full_body_FRONT_VI-1786365042568.png?v=1786557786",
+          "width": 1792,
+          "height": 2400
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/E-commerce_product_photography_SIDE_VIEW_CLOSE-UP-1786365039656.png?v=1786557786",
+          "width": 1792,
+          "height": 2400
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/E-commerce_product_photography_FRONT_CLOSE-UP_VIE-1786365035135.png?v=1786557786",
+          "width": 1792,
+          "height": 2400
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/E-commerce_product_photography_full_body_BACK_VIE-1786365044234.png?v=1786557786",
+          "width": 1792,
+          "height": 2400
+        }
+      ]
+    },
+    {
+      "id": 9659435286787,
+      "handle": "filo-buckle-pants-style-2-sterling-grey",
+      "title": "FILO Buckle Pants Style 2 - Sterling Grey",
+      "body_html": "<p>A refined expression of modern tailoring, crafted with precision and attention to detail. Featuring a distinctive buckle-style waistband and a thoughtfully structured silhouette, these pants blend contemporary design with timeless sophistication. Engineered for elevated everyday wear, they deliver a polished look without compromising on comfort.</p><ul>\n<li>Tailored Craftsmanship</li>\n<li>Modern Structure</li>\n<li>Effortless Versatility</li>\n<li>Elevated Everyday Style</li>\n</ul>",
+      "product_type": "Pants",
+      "tags": [
+        "buckle",
+        "everyday",
+        "pants",
+        "premium",
+        "tailored"
+      ],
+      "created_at": "2026-09-17T08:13:15+05:30",
+      "options": [
+        {
+          "name": "Size",
+          "values": [
+            "28",
+            "30",
+            "32",
+            "34",
+            "36",
+            "38",
+            "40"
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "id": 49636902764803,
+          "title": "28",
+          "option1": "28",
+          "option2": null,
+          "price": "1888.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49636902797571,
+          "title": "30",
+          "option1": "30",
+          "option2": null,
+          "price": "1888.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49636902830339,
+          "title": "32",
+          "option1": "32",
+          "option2": null,
+          "price": "1888.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49636902863107,
+          "title": "34",
+          "option1": "34",
+          "option2": null,
+          "price": "1888.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49636902895875,
+          "title": "36",
+          "option1": "36",
+          "option2": null,
+          "price": "1888.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49636902928643,
+          "title": "38",
+          "option1": "38",
+          "option2": null,
+          "price": "1888.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49636902961411,
+          "title": "40",
+          "option1": "40",
+          "option2": null,
+          "price": "1888.00",
+          "compare_at_price": null,
+          "available": true
+        }
+      ],
+      "images": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/E-commerce_product_photography_full_body_FRONT_VI-1786365350005.png?v=1786557760",
+          "width": 1792,
+          "height": 2400
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/E-commerce_product_photography_SIDE_VIEW_CLOSE-UP-1786365345377.png?v=1786557760",
+          "width": 1792,
+          "height": 2400
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/E-commerce_product_photography_FRONT_CLOSE-UP_VIE-1786365347549.png?v=1786557760",
+          "width": 1792,
+          "height": 2400
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/E-commerce_product_photography_full_body_BACK_VIE-1786365351784.png?v=1786557760",
+          "width": 1792,
+          "height": 2400
+        }
+      ]
+    },
+    {
+      "id": 9659434828035,
+      "handle": "filo-buckle-pants-style-1-vanilla-white",
+      "title": "FILO Buckle Pants Style 1 - Vanilla White",
+      "body_html": "<p>A refined expression of modern tailoring, crafted with precision and attention to detail. Featuring a distinctive buckle-style waistband and a thoughtfully structured silhouette, these pants blend contemporary design with timeless sophistication. Engineered for elevated everyday wear, they deliver a polished look without compromising on comfort.</p><ul>\n<li>Tailored Craftsmanship</li>\n<li>Modern Structure</li>\n<li>Effortless Versatility</li>\n<li>Elevated Everyday Style</li>\n</ul>",
+      "product_type": "Pants",
+      "tags": [
+        "buckle",
+        "everyday",
+        "pants",
+        "premium",
+        "tailored"
+      ],
+      "created_at": "2026-09-17T08:13:08+05:30",
+      "options": [
+        {
+          "name": "Size",
+          "values": [
+            "28",
+            "30",
+            "32",
+            "34",
+            "36",
+            "38",
+            "40"
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "id": 49636901912835,
+          "title": "28",
+          "option1": "28",
+          "option2": null,
+          "price": "1888.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49636901945603,
+          "title": "30",
+          "option1": "30",
+          "option2": null,
+          "price": "1888.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49636901978371,
+          "title": "32",
+          "option1": "32",
+          "option2": null,
+          "price": "1888.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49636902011139,
+          "title": "34",
+          "option1": "34",
+          "option2": null,
+          "price": "1888.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49636902043907,
+          "title": "36",
+          "option1": "36",
+          "option2": null,
+          "price": "1888.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49636902076675,
+          "title": "38",
+          "option1": "38",
+          "option2": null,
+          "price": "1888.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49636902109443,
+          "title": "40",
+          "option1": "40",
+          "option2": null,
+          "price": "1888.00",
+          "compare_at_price": null,
+          "available": true
+        }
+      ],
+      "images": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/Edit_the_image_Change_the_shirt_color_to_chocolat-1786715808948.png?v=1786724786",
+          "width": 1696,
+          "height": 2528
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/Edit_the_image_Change_the_shirt_color_to_chocolat-1786279345944.png?v=1786557250",
+          "width": 1696,
+          "height": 2528
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/Edit_the_image_Change_the_shirt_color_to_chocolat-1786279349134.png?v=1786557250",
+          "width": 1696,
+          "height": 2528
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/Edit_the_image_Change_the_shirt_color_to_chocolat-1786279347656.png?v=1786557250",
+          "width": 1696,
+          "height": 2528
+        }
+      ]
+    },
+    {
+      "id": 9659434369283,
+      "handle": "filo-buckle-pants-style-1-imperial-navy",
+      "title": "FILO Buckle Pants Style 1 - Imperial Navy",
+      "body_html": "<p>A refined expression of modern tailoring, crafted with precision and attention to detail. Featuring a distinctive buckle-style waistband and a thoughtfully structured silhouette, these pants blend contemporary design with timeless sophistication. Engineered for elevated everyday wear, they deliver a polished look without compromising on comfort.</p><ul>\n<li>Tailored Craftsmanship</li>\n<li>Modern Structure</li>\n<li>Effortless Versatility</li>\n<li>Elevated Everyday Style</li>\n</ul>",
+      "product_type": "Pants",
+      "tags": [
+        "buckle",
+        "everyday",
+        "pants",
+        "premium",
+        "tailored"
+      ],
+      "created_at": "2026-09-17T08:13:01+05:30",
+      "options": [
+        {
+          "name": "Size",
+          "values": [
+            "28",
+            "30",
+            "32",
+            "34",
+            "36",
+            "38",
+            "40"
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "id": 49636901028099,
+          "title": "28",
+          "option1": "28",
+          "option2": null,
+          "price": "1888.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49636901060867,
+          "title": "30",
+          "option1": "30",
+          "option2": null,
+          "price": "1888.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49636901093635,
+          "title": "32",
+          "option1": "32",
+          "option2": null,
+          "price": "1888.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49636901126403,
+          "title": "34",
+          "option1": "34",
+          "option2": null,
+          "price": "1888.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49636901159171,
+          "title": "36",
+          "option1": "36",
+          "option2": null,
+          "price": "1888.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49636901191939,
+          "title": "38",
+          "option1": "38",
+          "option2": null,
+          "price": "1888.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49636901224707,
+          "title": "40",
+          "option1": "40",
+          "option2": null,
+          "price": "1888.00",
+          "compare_at_price": null,
+          "available": true
+        }
+      ],
+      "images": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/Edit_the_image_Change_the_shirt_color_to_a_pure_b-1786276567095.png?v=1786557244",
+          "width": 1696,
+          "height": 2528
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/Edit_the_image_Change_the_shirt_color_to_a_pure_b-1786276568683.png?v=1786557244",
+          "width": 1696,
+          "height": 2528
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/Edit_the_image_Change_the_shirt_color_to_white_sa-1786276415634.png?v=1786557245",
+          "width": 1696,
+          "height": 2528
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/Edit_the_image_Change_the_shirt_color_to_a_pure_b-1786276570825.png?v=1786557244",
+          "width": 1696,
+          "height": 2528
+        }
+      ]
+    },
+    {
+      "id": 9659433844995,
+      "handle": "filo-buckle-pants-style-1-sterling-grey",
+      "title": "FILO Buckle Pants Style 1 - Sterling Grey",
+      "body_html": "<p>A refined expression of modern tailoring, crafted with precision and attention to detail. Featuring a distinctive buckle-style waistband and a thoughtfully structured silhouette, these pants blend contemporary design with timeless sophistication. Engineered for elevated everyday wear, they deliver a polished look without compromising on comfort.</p><ul>\n<li>Tailored Craftsmanship</li>\n<li>Modern Structure</li>\n<li>Effortless Versatility</li>\n<li>Elevated Everyday Style</li>\n</ul>",
+      "product_type": "Pants",
+      "tags": [
+        "buckle",
+        "everyday",
+        "pants",
+        "premium",
+        "tailored"
+      ],
+      "created_at": "2026-09-17T08:12:54+05:30",
+      "options": [
+        {
+          "name": "Size",
+          "values": [
+            "28",
+            "30",
+            "32",
+            "34",
+            "36",
+            "38",
+            "40"
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "id": 49636900012291,
+          "title": "28",
+          "option1": "28",
+          "option2": null,
+          "price": "1888.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49636900045059,
+          "title": "30",
+          "option1": "30",
+          "option2": null,
+          "price": "1888.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49636900077827,
+          "title": "32",
+          "option1": "32",
+          "option2": null,
+          "price": "1888.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49636900110595,
+          "title": "34",
+          "option1": "34",
+          "option2": null,
+          "price": "1888.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49636900143363,
+          "title": "36",
+          "option1": "36",
+          "option2": null,
+          "price": "1888.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49636900176131,
+          "title": "38",
+          "option1": "38",
+          "option2": null,
+          "price": "1888.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49636900208899,
+          "title": "40",
+          "option1": "40",
+          "option2": null,
+          "price": "1888.00",
+          "compare_at_price": null,
+          "available": true
+        }
+      ],
+      "images": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/Edit_the_image_Change_the_shoesboots_color_to_BL-1786280224444.png?v=1786557237",
+          "width": 1696,
+          "height": 2528
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/Edit_the_image_Change_the_shirt_color_to_solid_bl-1786280081359.png?v=1786557237",
+          "width": 1696,
+          "height": 2528
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/Edit_the_image_Change_the_shirt_color_to_solid_bl-1786280070879.png?v=1786557237",
+          "width": 1696,
+          "height": 2528
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/Edit_the_image_Change_the_shirt_color_to_solid_bl-1786280077279.png?v=1786557237",
+          "width": 1696,
+          "height": 2528
+        }
+      ]
+    },
+    {
+      "id": 9659433451779,
+      "handle": "filo-air-linen-shorts-vanilla-white",
+      "title": "FILO Air (Linen Shorts) - Vanilla White",
+      "body_html": "<p>Light, breathable, and effortlessly stylish. Crafted from premium linen fabric, these shorts offer a naturally airy feel and all-day comfort. Designed for easy movement and a relaxed fit, they're perfect for warm days, holidays, and everyday casual wear.</p><ul>\n<li>Lightweight</li>\n<li>Breathable</li>\n<li>Comfortable</li>\n<li>Effortless Style</li>\n</ul>",
+      "product_type": "Shorts",
+      "tags": [
+        "breathable",
+        "casual",
+        "linen",
+        "shorts",
+        "summer"
+      ],
+      "created_at": "2026-09-17T08:12:47+05:30",
+      "options": [
+        {
+          "name": "Size",
+          "values": [
+            "28",
+            "30",
+            "32",
+            "34",
+            "36",
+            "38",
+            "40"
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "id": 49636899324163,
+          "title": "28",
+          "option1": "28",
+          "option2": null,
+          "price": "1666.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49636899356931,
+          "title": "30",
+          "option1": "30",
+          "option2": null,
+          "price": "1666.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49636899389699,
+          "title": "32",
+          "option1": "32",
+          "option2": null,
+          "price": "1666.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49636899422467,
+          "title": "34",
+          "option1": "34",
+          "option2": null,
+          "price": "1666.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49636899455235,
+          "title": "36",
+          "option1": "36",
+          "option2": null,
+          "price": "1666.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49636899488003,
+          "title": "38",
+          "option1": "38",
+          "option2": null,
+          "price": "1666.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49636899520771,
+          "title": "40",
+          "option1": "40",
+          "option2": null,
+          "price": "1666.00",
+          "compare_at_price": null,
+          "available": true
+        }
+      ],
+      "images": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/Change_only_the_colors_the_shorts_from_black_to_p-1786435770004.jpg?v=1786556518",
+          "width": 896,
+          "height": 1200
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/Change_only_the_colors_the_shorts_from_black_to_p-1786435774655.jpg?v=1786556518",
+          "width": 896,
+          "height": 1200
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/Change_only_the_colors_the_shorts_from_black_to_p-1786435933566.jpg?v=1786556518",
+          "width": 896,
+          "height": 1200
+        }
+      ]
+    },
+    {
+      "id": 9659433091331,
+      "handle": "filo-air-linen-shorts-imperial-navy",
+      "title": "FILO Air (Linen Shorts) - Imperial Navy",
+      "body_html": "<p>Light, breathable, and effortlessly stylish. Crafted from premium linen fabric, these shorts offer a naturally airy feel and all-day comfort. Designed for easy movement and a relaxed fit, they're perfect for warm days, holidays, and everyday casual wear.</p><ul>\n<li>Lightweight</li>\n<li>Breathable</li>\n<li>Comfortable</li>\n<li>Effortless Style</li>\n</ul>",
+      "product_type": "Shorts",
+      "tags": [
+        "breathable",
+        "casual",
+        "linen",
+        "shorts",
+        "summer"
+      ],
+      "created_at": "2026-09-17T08:12:40+05:30",
+      "options": [
+        {
+          "name": "Size",
+          "values": [
+            "28",
+            "30",
+            "32",
+            "34",
+            "36",
+            "38",
+            "40"
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "id": 49636898472195,
+          "title": "28",
+          "option1": "28",
+          "option2": null,
+          "price": "1666.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49636898504963,
+          "title": "30",
+          "option1": "30",
+          "option2": null,
+          "price": "1666.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49636898537731,
+          "title": "32",
+          "option1": "32",
+          "option2": null,
+          "price": "1666.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49636898570499,
+          "title": "34",
+          "option1": "34",
+          "option2": null,
+          "price": "1666.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49636898603267,
+          "title": "36",
+          "option1": "36",
+          "option2": null,
+          "price": "1666.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49636898636035,
+          "title": "38",
+          "option1": "38",
+          "option2": null,
+          "price": "1666.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49636898668803,
+          "title": "40",
+          "option1": "40",
+          "option2": null,
+          "price": "1666.00",
+          "compare_at_price": null,
+          "available": true
+        }
+      ],
+      "images": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/Modify_only_the_color_of_the_shorts_to_dark_navy_b-1786435414959.jpg?v=1786556507",
+          "width": 1648,
+          "height": 2208
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/Change_only_the_color_of_the_shorts_to_dark_navy_b-1786435646459.jpg?v=1786556507",
+          "width": 1648,
+          "height": 2208
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/Keep_everything_exactly_the_same_-_the_young_man_w-1786435420782.jpg?v=1786556507",
+          "width": 1648,
+          "height": 2208
+        }
+      ]
+    },
+    {
+      "id": 9647154430211,
+      "handle": "filo-eco",
+      "title": "FILO 9TO5 - Obsidian Black",
+      "body_html": "<p><strong>Fabric</strong> – Premium 2-Way Stretch<br><strong>Fit</strong> – Smart Corporate Fit<br><strong>Stretch</strong> – Flexible 2-Way Comfort<br><strong>Stitching</strong> – Premium Reinforced Stitching<br><strong>Finish</strong> – Clean, Structured &amp; Office-Ready<br><strong>Occasion</strong> – Workwear, Meetings &amp; Everyday Formal Wear</p>\n<h4>Description</h4>\n<p><strong>FILO 9TO5</strong> is built for men who want to stay sharp and comfortable throughout the working day. Crafted from premium <strong>2-way stretch fabric</strong>, it offers easy movement while maintaining a clean and structured silhouette.</p>\n<p>Finished with <strong>premium stitching and refined detailing</strong>, the trouser is designed to deliver a polished look from morning meetings to after-office plans. Its smart fit makes it easy to pair with shirts, polos, blazers or formal shoes.</p>\n<p><strong>Professional in appearance. Flexible in comfort. Made for your 9TO5 and beyond.</strong></p>",
+      "product_type": "",
+      "tags": [
+        "everyday"
+      ],
+      "created_at": "2026-09-13T13:46:05+05:30",
+      "options": [
+        {
+          "name": "Size",
+          "values": [
+            "28",
+            "30",
+            "32",
+            "34",
+            "36",
+            "38",
+            "40"
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "id": 49614740062467,
+          "title": "28",
+          "option1": "28",
+          "option2": null,
+          "price": "888.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49614740095235,
+          "title": "30",
+          "option1": "30",
+          "option2": null,
+          "price": "888.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49614740128003,
+          "title": "32",
+          "option1": "32",
+          "option2": null,
+          "price": "888.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49614740160771,
+          "title": "34",
+          "option1": "34",
+          "option2": null,
+          "price": "888.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49614740193539,
+          "title": "36",
+          "option1": "36",
+          "option2": null,
+          "price": "888.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49614740226307,
+          "title": "38",
+          "option1": "38",
+          "option2": null,
+          "price": "888.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49614740259075,
+          "title": "40",
+          "option1": "40",
+          "option2": null,
+          "price": "888.00",
+          "compare_at_price": null,
+          "available": true
+        }
+      ],
+      "images": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/IMG_3928.png?v=1789287143",
+          "width": 1122,
+          "height": 1402
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/IMG_3924.png?v=1789287142",
+          "width": 1122,
+          "height": 1402
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/IMG_3925.png?v=1789287142",
+          "width": 1122,
+          "height": 1402
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/IMG_3926.png?v=1789287143",
+          "width": 1122,
+          "height": 1402
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/IMG_3927.png?v=1789287142",
+          "width": 1122,
+          "height": 1402
+        }
+      ]
+    },
+    {
+      "id": 9639822033155,
+      "handle": "filo-ease-1",
+      "title": "FILO - Ease - Sterling Grey",
+      "body_html": "<p><strong>Wrinkle-Free • No Iron Required • Easy Wash • All-Day Comfort</strong><br></p>\n<p>Designed for effortless everyday wear. Crafted from wrinkle-free fabric, FILO Ease keeps you looking sharp without the need for ironing. Easy to wash, comfortable for all-day wear, and made to keep up with your everyday routine.</p>",
+      "product_type": "",
+      "tags": [],
+      "created_at": "2026-09-10T21:17:44+05:30",
+      "options": [
+        {
+          "name": "Size",
+          "values": [
+            "28",
+            "30",
+            "32",
+            "34",
+            "36",
+            "38",
+            "40"
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "id": 49601036812547,
+          "title": "28",
+          "option1": "28",
+          "option2": null,
+          "price": "1777.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49637012570371,
+          "title": "30",
+          "option1": "30",
+          "option2": null,
+          "price": "1777.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49637012603139,
+          "title": "32",
+          "option1": "32",
+          "option2": null,
+          "price": "1777.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49637012635907,
+          "title": "34",
+          "option1": "34",
+          "option2": null,
+          "price": "1777.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49637012668675,
+          "title": "36",
+          "option1": "36",
+          "option2": null,
+          "price": "1777.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49637012701443,
+          "title": "38",
+          "option1": "38",
+          "option2": null,
+          "price": "1777.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49637012734211,
+          "title": "40",
+          "option1": "40",
+          "option2": null,
+          "price": "1777.00",
+          "compare_at_price": null,
+          "available": true
+        }
+      ],
+      "images": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/IMG_4166.png?v=1789704442",
+          "width": 1086,
+          "height": 1448
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/IMG_4164.png?v=1789704441",
+          "width": 1086,
+          "height": 1448
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/IMG_4163.png?v=1789704441",
+          "width": 1086,
+          "height": 1448
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/IMG_4168.png?v=1789704648",
+          "width": 1087,
+          "height": 1447
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/IMG_4167.png?v=1789704440",
+          "width": 1086,
+          "height": 1448
+        }
+      ]
+    },
+    {
+      "id": 9617395974403,
+      "handle": "filo-travel-pants",
+      "title": "Filo - Travel Pants - Obsidian Black",
+      "body_html": "<p><strong>Stretch • Comfort • Flexibility • Everyday Versatility<br></strong>Designed for comfort on the move. Crafted from premium 4-Way Lycra fabric, these travel pants offer exceptional stretch and flexibility, while the elastic waistband ensures a comfortable, easy fit. Lightweight and versatile, they’re made for long journeys, everyday wear, and everything in between.<strong><br></strong></p>",
+      "product_type": "",
+      "tags": [],
+      "created_at": "2026-08-29T21:53:53+05:30",
+      "options": [
+        {
+          "name": "Size",
+          "values": [
+            "28",
+            "30",
+            "32",
+            "34",
+            "36",
+            "38",
+            "40"
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "id": 49542204915971,
+          "title": "28",
+          "option1": "28",
+          "option2": null,
+          "price": "1777.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49637016797443,
+          "title": "30",
+          "option1": "30",
+          "option2": null,
+          "price": "1777.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49637016830211,
+          "title": "32",
+          "option1": "32",
+          "option2": null,
+          "price": "1777.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49637016862979,
+          "title": "34",
+          "option1": "34",
+          "option2": null,
+          "price": "1777.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49637016895747,
+          "title": "36",
+          "option1": "36",
+          "option2": null,
+          "price": "1777.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49637016928515,
+          "title": "38",
+          "option1": "38",
+          "option2": null,
+          "price": "1777.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49637016961283,
+          "title": "40",
+          "option1": "40",
+          "option2": null,
+          "price": "1777.00",
+          "compare_at_price": null,
+          "available": true
+        }
+      ],
+      "images": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/Enhance_this_productfashion_photography_close-up_-1786522565475.png?v=1788018743",
+          "width": 1792,
+          "height": 2400
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/Edit_this_product_photo_keep_the_trousers_hands-1786522692310.png?v=1788018743",
+          "width": 1792,
+          "height": 2400
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/Enhance_this_productfashion_photography_image_Re-1786522486138.png?v=1788018743",
+          "width": 1792,
+          "height": 2400
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/Travelpant.png?v=1788018742",
+          "width": 1792,
+          "height": 2400
+        }
+      ]
+    },
+    {
+      "id": 9617388994819,
+      "handle": "filo-travel-pants-2",
+      "title": "Filo - Travel Pants - Silver",
+      "body_html": "<p><strong>Stretch • Comfort • Flexibility • Everyday Versatility<br></strong>Designed for comfort on the move. Crafted from premium 4-Way Lycra fabric, these travel pants offer exceptional stretch and flexibility, while the elastic waistband ensures a comfortable, easy fit. Lightweight and versatile, they’re made for long journeys, everyday wear, and everything in between.</p>",
+      "product_type": "",
+      "tags": [],
+      "created_at": "2026-08-29T21:13:54+05:30",
+      "options": [
+        {
+          "name": "Size",
+          "values": [
+            "28",
+            "30",
+            "32",
+            "34",
+            "36",
+            "38",
+            "40"
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "id": 49542183289091,
+          "title": "28",
+          "option1": "28",
+          "option2": null,
+          "price": "1777.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49636980621571,
+          "title": "30",
+          "option1": "30",
+          "option2": null,
+          "price": "1777.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49636980654339,
+          "title": "32",
+          "option1": "32",
+          "option2": null,
+          "price": "1777.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49636980687107,
+          "title": "34",
+          "option1": "34",
+          "option2": null,
+          "price": "1777.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49636980719875,
+          "title": "36",
+          "option1": "36",
+          "option2": null,
+          "price": "1777.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49636980752643,
+          "title": "38",
+          "option1": "38",
+          "option2": null,
+          "price": "1777.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49636980785411,
+          "title": "40",
+          "option1": "40",
+          "option2": null,
+          "price": "1777.00",
+          "compare_at_price": null,
+          "available": true
+        }
+      ],
+      "images": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/Keep_everything_exactly_the_same_Only_change_the_-1787997982565.png?v=1788018002",
+          "width": 1792,
+          "height": 2400
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/Fix_the_creases_and_wrinkles_on_the_back_of_the_pa-1787998058735.png?v=1788018002",
+          "width": 1792,
+          "height": 2400
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/Keep_everything_exactly_the_same_Only_change_the_-1787997988399.png?v=1788018002",
+          "width": 1792,
+          "height": 2400
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/Keep_everything_exactly_the_same_Only_change_the_-1787997979339.png?v=1788018002",
+          "width": 1792,
+          "height": 2400
+        }
+      ]
+    },
+    {
+      "id": 9617387782403,
+      "handle": "filo-travel-pants-1",
+      "title": "Filo - Travel Pants - Sterling Grey",
+      "body_html": "<p><strong>Stretch • Comfort • Flexibility • Everyday Versatility<br></strong>Designed for comfort on the move. Crafted from premium 4-Way Lycra fabric, these travel pants offer exceptional stretch and flexibility, while the elastic waistband ensures a comfortable, easy fit. Lightweight and versatile, they’re made for long journeys, everyday wear, and everything in between.<strong><br></strong></p>",
+      "product_type": "",
+      "tags": [],
+      "created_at": "2026-08-29T21:06:17+05:30",
+      "options": [
+        {
+          "name": "Size",
+          "values": [
+            "28",
+            "30",
+            "32",
+            "34",
+            "36",
+            "38",
+            "40"
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "id": 49542180503811,
+          "title": "28",
+          "option1": "28",
+          "option2": null,
+          "price": "1777.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49637015617795,
+          "title": "30",
+          "option1": "30",
+          "option2": null,
+          "price": "1777.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49637015650563,
+          "title": "32",
+          "option1": "32",
+          "option2": null,
+          "price": "1777.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49637015683331,
+          "title": "34",
+          "option1": "34",
+          "option2": null,
+          "price": "1777.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49637015716099,
+          "title": "36",
+          "option1": "36",
+          "option2": null,
+          "price": "1777.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49637015748867,
+          "title": "38",
+          "option1": "38",
+          "option2": null,
+          "price": "1777.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49637015781635,
+          "title": "40",
+          "option1": "40",
+          "option2": null,
+          "price": "1777.00",
+          "compare_at_price": null,
+          "available": true
+        }
+      ],
+      "images": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/Keep_everything_exactly_the_same_Only_change_the_-1787998181118.png?v=1788004157",
+          "width": 1792,
+          "height": 2400
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/Keep_everything_exactly_the_same_Only_change_the_-1787998186708.png?v=1788004157",
+          "width": 1792,
+          "height": 2400
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/Keep_everything_exactly_the_same_Only_change_the_-1787998184153.png?v=1788004157",
+          "width": 1792,
+          "height": 2400
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/Keep_everything_exactly_the_same_Only_change_the_-1787998178436.png?v=1788004157",
+          "width": 1792,
+          "height": 2400
+        }
+      ]
+    },
+    {
+      "id": 9602670723331,
+      "handle": "filo-classic",
+      "title": "FILO - Classic - Coffee",
+      "body_html": "<p>100% Premium Cotton <strong>Fit:</strong> Straight-leg, Regular <strong>Color:</strong> Ivory White <strong>Waistband:</strong> Comfortable mid-rise with belt loops <strong>Pockets:</strong> Two side pockets, two back welt pockets <strong>Closure:</strong> Button &amp; zip front <strong>Length:</strong> Full-length tailored cut. </p>",
+      "product_type": "",
+      "tags": [],
+      "created_at": "2026-08-20T11:37:47+05:30",
+      "options": [
+        {
+          "name": "Size",
+          "values": [
+            "28",
+            "30",
+            "32",
+            "34",
+            "36",
+            "38",
+            "40"
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "id": 49487172108547,
+          "title": "28",
+          "option1": "28",
+          "option2": null,
+          "price": "1400.00",
+          "compare_at_price": null,
+          "available": false
+        },
+        {
+          "id": 49637011751171,
+          "title": "30",
+          "option1": "30",
+          "option2": null,
+          "price": "1400.00",
+          "compare_at_price": null,
+          "available": false
+        },
+        {
+          "id": 49637011783939,
+          "title": "32",
+          "option1": "32",
+          "option2": null,
+          "price": "1400.00",
+          "compare_at_price": null,
+          "available": false
+        },
+        {
+          "id": 49637011816707,
+          "title": "34",
+          "option1": "34",
+          "option2": null,
+          "price": "1400.00",
+          "compare_at_price": null,
+          "available": false
+        },
+        {
+          "id": 49637011849475,
+          "title": "36",
+          "option1": "36",
+          "option2": null,
+          "price": "1400.00",
+          "compare_at_price": null,
+          "available": false
+        },
+        {
+          "id": 49637011882243,
+          "title": "38",
+          "option1": "38",
+          "option2": null,
+          "price": "1400.00",
+          "compare_at_price": null,
+          "available": false
+        },
+        {
+          "id": 49637011915011,
+          "title": "40",
+          "option1": "40",
+          "option2": null,
+          "price": "1400.00",
+          "compare_at_price": null,
+          "available": false
+        }
+      ],
+      "images": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/Professional_fashion_lookbook_photograph_dynamic_-1787206521990.png?v=1787206563",
+          "width": 1792,
+          "height": 2400
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/Professional_fashion_lookbook_photograph_back_vie-1787206519291.png?v=1787206563",
+          "width": 1792,
+          "height": 2400
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/Professional_fashion_lookbook_photograph_of_a_youn-1787206514672.png?v=1787206563",
+          "width": 1792,
+          "height": 2400
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/Professional_fashion_lookbook_photograph_right_si-1787206517080.png?v=1787206562",
+          "width": 1792,
+          "height": 2400
+        }
+      ]
+    },
+    {
+      "id": 9599687524611,
+      "handle": "filo-ease",
+      "title": "FILO Ease - Coffee",
+      "body_html": "<p>FILO Ease <br><strong>Wrinkle-Free • No Iron Required • Easy Wash • All-Day Comfort</strong><br></p>\n<p>Designed for effortless everyday wear. Crafted from wrinkle-free fabric, FILO Ease keeps you looking sharp without the need for ironing. Easy to wash, comfortable for all-day wear, and made to keep up with your everyday routine.</p>",
+      "product_type": "",
+      "tags": [
+        "Men",
+        "Pants"
+      ],
+      "created_at": "2026-08-18T22:03:07+05:30",
+      "options": [
+        {
+          "name": "Color",
+          "values": [
+            "Coffee"
+          ]
+        },
+        {
+          "name": "Size",
+          "values": [
+            "28",
+            "30",
+            "32",
+            "34",
+            "36",
+            "38",
+            "40"
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "id": 49481469362435,
+          "title": "Coffee / 28",
+          "option1": "Coffee",
+          "option2": "28",
+          "price": "1777.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49481469395203,
+          "title": "Coffee / 30",
+          "option1": "Coffee",
+          "option2": "30",
+          "price": "1777.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49481469427971,
+          "title": "Coffee / 32",
+          "option1": "Coffee",
+          "option2": "32",
+          "price": "1777.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49481469460739,
+          "title": "Coffee / 34",
+          "option1": "Coffee",
+          "option2": "34",
+          "price": "1777.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49481469493507,
+          "title": "Coffee / 36",
+          "option1": "Coffee",
+          "option2": "36",
+          "price": "1777.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49481469526275,
+          "title": "Coffee / 38",
+          "option1": "Coffee",
+          "option2": "38",
+          "price": "1777.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49481469559043,
+          "title": "Coffee / 40",
+          "option1": "Coffee",
+          "option2": "40",
+          "price": "1777.00",
+          "compare_at_price": null,
+          "available": true
+        }
+      ],
+      "images": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/IMG_4118.png?v=1789702970",
+          "width": 1086,
+          "height": 1448
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/IMG_4119.png?v=1789702972",
+          "width": 1086,
+          "height": 1448
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/IMG_4115.png?v=1789702972",
+          "width": 1086,
+          "height": 1448
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/IMG_4120.png?v=1789702972",
+          "width": 1086,
+          "height": 1448
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/IMG_4122.png?v=1789702971",
+          "width": 1086,
+          "height": 1448
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/IMG_4121.png?v=1789702972",
+          "width": 1086,
+          "height": 1448
+        }
+      ]
+    },
+    {
+      "id": 9592935645443,
+      "handle": "filo-buckle-pants-style-2",
+      "title": "FILO Buckle Pants Style 2 - Obsidian Black",
+      "body_html": "<p>A refined expression of modern tailoring, crafted with precision and attention to detail. Featuring a distinctive buckle-style waistband and a thoughtfully structured silhouette, these pants blend contemporary design with timeless sophistication. Engineered for elevated everyday wear, they deliver a polished look without compromising on comfort.</p><ul>\n<li>Tailored Craftsmanship</li>\n<li>Modern Structure</li>\n<li>Effortless Versatility</li>\n<li>Elevated Everyday Style</li>\n</ul>",
+      "product_type": "Pants",
+      "tags": [
+        "buckle",
+        "everyday",
+        "pants",
+        "premium",
+        "tailored"
+      ],
+      "created_at": "2026-08-12T23:30:18+05:30",
+      "options": [
+        {
+          "name": "Size",
+          "values": [
+            "28",
+            "30",
+            "32",
+            "34",
+            "36",
+            "38",
+            "40"
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "id": 49440559005955,
+          "title": "28",
+          "option1": "28",
+          "option2": null,
+          "price": "1888.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49440559038723,
+          "title": "30",
+          "option1": "30",
+          "option2": null,
+          "price": "1888.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49440559071491,
+          "title": "32",
+          "option1": "32",
+          "option2": null,
+          "price": "1888.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49440559104259,
+          "title": "34",
+          "option1": "34",
+          "option2": null,
+          "price": "1888.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49440559137027,
+          "title": "36",
+          "option1": "36",
+          "option2": null,
+          "price": "1888.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49440559169795,
+          "title": "38",
+          "option1": "38",
+          "option2": null,
+          "price": "1888.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49440559202563,
+          "title": "40",
+          "option1": "40",
+          "option2": null,
+          "price": "1888.00",
+          "compare_at_price": null,
+          "available": true
+        }
+      ],
+      "images": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/E-commerce_product_photography_SIDE_VIEW_CLOSE-UP-1786364322211.png?v=1786557713",
+          "width": 1792,
+          "height": 2400
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/E-commerce_product_photography_full_body_FRONT_VI-1786364325003.png?v=1786557713",
+          "width": 1792,
+          "height": 2400
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/E-commerce_product_photography_FRONT_CLOSE-UP_VIE-1786364320107.png?v=1786557713",
+          "width": 1792,
+          "height": 2400
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/E-commerce_product_photography_full_body_BACK_VIE-1786364327138.png?v=1786557713",
+          "width": 1792,
+          "height": 2400
+        }
+      ]
+    },
+    {
+      "id": 9592934498563,
+      "handle": "filo-buckle-pants-style-1",
+      "title": "FILO Buckle Pants Style 1 - Obsidian Black",
+      "body_html": "<p>A refined expression of modern tailoring, crafted with precision and attention to detail. Featuring a distinctive buckle-style waistband and a thoughtfully structured silhouette, these pants blend contemporary design with timeless sophistication. Engineered for elevated everyday wear, they deliver a polished look without compromising on comfort.</p><ul>\n<li>Tailored Craftsmanship</li>\n<li>Modern Structure</li>\n<li>Effortless Versatility</li>\n<li>Elevated Everyday Style</li>\n</ul>",
+      "product_type": "Pants",
+      "tags": [
+        "buckle",
+        "everyday",
+        "pants",
+        "premium",
+        "tailored"
+      ],
+      "created_at": "2026-08-12T23:26:36+05:30",
+      "options": [
+        {
+          "name": "Size",
+          "values": [
+            "28",
+            "30",
+            "32",
+            "34",
+            "36",
+            "38",
+            "40"
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "id": 49440555270403,
+          "title": "28",
+          "option1": "28",
+          "option2": null,
+          "price": "1888.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49440555401475,
+          "title": "30",
+          "option1": "30",
+          "option2": null,
+          "price": "1888.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49440555532547,
+          "title": "32",
+          "option1": "32",
+          "option2": null,
+          "price": "1888.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49440555663619,
+          "title": "34",
+          "option1": "34",
+          "option2": null,
+          "price": "1888.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49440555794691,
+          "title": "36",
+          "option1": "36",
+          "option2": null,
+          "price": "1888.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49440555925763,
+          "title": "38",
+          "option1": "38",
+          "option2": null,
+          "price": "1888.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49440556056835,
+          "title": "40",
+          "option1": "40",
+          "option2": null,
+          "price": "1888.00",
+          "compare_at_price": null,
+          "available": true
+        }
+      ],
+      "images": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/Enhance_the_image_to_high_2k_detail_level_sharpen-1786280362095.png?v=1786557231",
+          "width": 1696,
+          "height": 2528
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/Enhance_the_image_to_high_2k_detail_level_sharpen-1786280359524.png?v=1786557231",
+          "width": 1696,
+          "height": 2528
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/Enhance_the_image_to_high_2k_detail_level_sharpen-1786280369742.png?v=1786557231",
+          "width": 1696,
+          "height": 2528
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/Enhance_the_image_to_high_2k_detail_level_sharpen-1786280363797.png?v=1786557231",
+          "width": 1696,
+          "height": 2528
+        }
+      ]
+    },
+    {
+      "id": 9592721735939,
+      "handle": "filo-air-linen-shorts",
+      "title": "FILO Air (Linen Shorts) - Obsidian Black",
+      "body_html": "<p>Light, breathable, and effortlessly stylish. Crafted from premium linen fabric, these shorts offer a naturally airy feel and all-day comfort. Designed for easy movement and a relaxed fit, they're perfect for warm days, holidays, and everyday casual wear.</p><ul>\n<li>Lightweight</li>\n<li>Breathable</li>\n<li>Comfortable</li>\n<li>Effortless Style</li>\n</ul>",
+      "product_type": "Shorts",
+      "tags": [
+        "breathable",
+        "casual",
+        "linen",
+        "shorts",
+        "summer"
+      ],
+      "created_at": "2026-08-12T18:54:14+05:30",
+      "options": [
+        {
+          "name": "Size",
+          "values": [
+            "28",
+            "30",
+            "32",
+            "34",
+            "36",
+            "38",
+            "40"
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "id": 49440548094211,
+          "title": "28",
+          "option1": "28",
+          "option2": null,
+          "price": "1666.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49440548126979,
+          "title": "30",
+          "option1": "30",
+          "option2": null,
+          "price": "1666.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49440548159747,
+          "title": "32",
+          "option1": "32",
+          "option2": null,
+          "price": "1666.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49440548192515,
+          "title": "34",
+          "option1": "34",
+          "option2": null,
+          "price": "1666.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49440548225283,
+          "title": "36",
+          "option1": "36",
+          "option2": null,
+          "price": "1666.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49440548258051,
+          "title": "38",
+          "option1": "38",
+          "option2": null,
+          "price": "1666.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49440548290819,
+          "title": "40",
+          "option1": "40",
+          "option2": null,
+          "price": "1666.00",
+          "compare_at_price": null,
+          "available": true
+        }
+      ],
+      "images": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/ChatGPT_Image_Sep_21_2026_at_11_32_17_AM.png?v=1789970662",
+          "width": 1086,
+          "height": 1448
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/ChatGPT_Image_Sep_21_2026_at_11_32_45_AM-4.png?v=1789970662",
+          "width": 1086,
+          "height": 1448
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/ChatGPT_Image_Sep_21_2026_at_11_32_42_AM-2.png?v=1789970662",
+          "width": 1086,
+          "height": 1448
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/ChatGPT_Image_Sep_21_2026_at_11_32_48_AM-6.png?v=1789970700",
+          "width": 1086,
+          "height": 1448
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/ChatGPT_Image_Sep_21_2026_at_11_32_40_AM-1.png?v=1789970661",
+          "width": 1086,
+          "height": 1448
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/ChatGPT_Image_Sep_21_2026_at_11_32_43_AM-3.png?v=1789970662",
+          "width": 1086,
+          "height": 1448
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/ChatGPT_Image_Sep_21_2026_at_11_32_46_AM-5.png?v=1789970661",
+          "width": 1086,
+          "height": 1448
+        }
+      ]
+    },
+    {
+      "id": 9521732878595,
+      "handle": "filo-flexi-trouser-founders-edition",
+      "title": "FILO Flexi Trouser  Founder's Edition - Olive Mosh",
+      "body_html": "<p><strong>The FILO Flexi Trouser — Founder's Edition</strong> is a tribute to the vision that inspired FILO. Crafted in a strictly limited run, this exclusive release combines premium stretch lycra fabric with a refined, modern silhouette to deliver exceptional comfort and effortless style. Designed for those who appreciate timeless essentials, the Founder's Edition is made to move seamlessly from work to weekends while reflecting the quality and attention to detail that define the FILO philosophy.</p>\n<p><strong>Key Features</strong></p>\n<ul>\n<li>\n<p>Exclusive <strong>Founder's Edition</strong> limited release</p>\n</li>\n<li>\n<p>Premium stretch lycra fabric for superior comfort and flexibility</p>\n</li>\n<li>\n<p>Tailored comfort fit with a clean, contemporary silhouette</p>\n</li>\n<li>\n<p>Lightweight, breathable, and built for all-day wear</p>\n</li>\n<li>\n<p>Versatile styling for office, travel, and everyday occasions</p>\n</li>\n<li>\n<p>Crafted with signature FILO quality and attention to detail</p>\n</li>\n</ul>",
+      "product_type": "Flexi 2 Way Lycra",
+      "tags": [
+        "Flexi Pant",
+        "Lycra Pant",
+        "Men",
+        "Pants",
+        "Stretch Pants"
+      ],
+      "created_at": "2026-07-05T23:12:22+05:30",
+      "options": [
+        {
+          "name": "Size",
+          "values": [
+            "28",
+            "30",
+            "32",
+            "34",
+            "36",
+            "38",
+            "40"
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "id": 49206486171907,
+          "title": "28",
+          "option1": "28",
+          "option2": null,
+          "price": "1666.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49206486204675,
+          "title": "30",
+          "option1": "30",
+          "option2": null,
+          "price": "1666.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49206486237443,
+          "title": "32",
+          "option1": "32",
+          "option2": null,
+          "price": "1666.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49206486270211,
+          "title": "34",
+          "option1": "34",
+          "option2": null,
+          "price": "1666.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49206486302979,
+          "title": "36",
+          "option1": "36",
+          "option2": null,
+          "price": "1666.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49206486335747,
+          "title": "38",
+          "option1": "38",
+          "option2": null,
+          "price": "1666.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 49206486368515,
+          "title": "40",
+          "option1": "40",
+          "option2": null,
+          "price": "1666.00",
+          "compare_at_price": null,
+          "available": true
+        }
+      ],
+      "images": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/ChatGPTImageJun30_2026_10_25_21PM.png?v=1783273481",
+          "width": 1023,
+          "height": 1537
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/ChatGPTImageJun30_2026_10_31_59PM.png?v=1783273481",
+          "width": 1023,
+          "height": 1537
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/ChatGPTImageJun30_2026_10_23_25PM.png?v=1783273481",
+          "width": 1025,
+          "height": 1535
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/ChatGPTImageJun30_2026_10_36_03PM.png?v=1783273481",
+          "width": 941,
+          "height": 1672
+        }
+      ]
+    },
+    {
+      "id": 9432925307139,
+      "handle": "flexi-2-way-lycra-pant",
+      "title": "FILO Flexi Trouser - Sterling Grey",
+      "body_html": "<p>The Flexi trouser is built for everyday comfort with a modern stretch fit. Its flexible lycra fabric moves with you, making it a reliable choice for office hours, casual plans, and all-day wear without compromising on style.</p>\n<ul>\n<li>Flexible lycra comfort fit</li>\n<li>Great for office, casual, and everyday styling</li>\n<li>Modern clean look with stretch support</li>\n<li>Available in wide colour options</li>\n</ul>",
+      "product_type": "Flexi 2 Way Lycra",
+      "tags": [
+        "Flexi Pant",
+        "Lycra Pant",
+        "Men",
+        "Pants",
+        "Stretch Pants"
+      ],
+      "created_at": "2026-05-22T19:14:26+05:30",
+      "options": [
+        {
+          "name": "Size",
+          "values": [
+            "28",
+            "30",
+            "32",
+            "34",
+            "36",
+            "38",
+            "40"
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "id": 48209852956931,
+          "title": "28",
+          "option1": "28",
+          "option2": null,
+          "price": "1666.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 48209852989699,
+          "title": "30",
+          "option1": "30",
+          "option2": null,
+          "price": "1666.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 48209853022467,
+          "title": "32",
+          "option1": "32",
+          "option2": null,
+          "price": "1666.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 48209853055235,
+          "title": "34",
+          "option1": "34",
+          "option2": null,
+          "price": "1666.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 48209853088003,
+          "title": "36",
+          "option1": "36",
+          "option2": null,
+          "price": "1666.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 48209853120771,
+          "title": "38",
+          "option1": "38",
+          "option2": null,
+          "price": "1666.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 48209853153539,
+          "title": "40",
+          "option1": "40",
+          "option2": null,
+          "price": "1666.00",
+          "compare_at_price": null,
+          "available": true
+        }
+      ],
+      "images": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/Enhance_this_EXACT_image_with_no_modifications_to_-1786366145519.png?v=1787118011",
+          "width": 1792,
+          "height": 2400
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/Enhance_this_EXACT_image_with_no_modifications_to_-1786366142942.png?v=1787118015",
+          "width": 1792,
+          "height": 2400
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/Enhance_this_EXACT_image_with_no_modifications_to_-1786366138007.png?v=1787118011",
+          "width": 1792,
+          "height": 2400
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/Enhance_this_EXACT_image_with_no_modifications_to_-1786366148700.png?v=1787118012",
+          "width": 1792,
+          "height": 2400
+        }
+      ]
+    },
+    {
+      "id": 9432924946691,
+      "handle": "linen-pant",
+      "title": "Linen Pant - Obsidian Black",
+      "body_html": "<p>Stay cool, comfortable, and polished with the Linen Pant. Made for breathable everyday styling, this pant gives a relaxed premium feel while maintaining a refined look for travel, casual outings, summer occasions, and smart daily wear.</p>\n<p>Crafted from premium linen for breathable comfort and timeless sophistication.<span aria-hidden=\"true\"></p>\n<p><strong>100% Linen</strong><br>Breathable • Lightweight • Naturally Soft</p>\n<ul>\n<li>Lightweight, breathable linen feel</li>\n<li>Premium relaxed yet sharp appearance</li>\n<li>Perfect for summer, travel, and casual occasions</li>\n<li>Available in versatile wardrobe colours</li>\n</ul>",
+      "product_type": "Linen",
+      "tags": [
+        "Linen Pant",
+        "Men",
+        "Pants",
+        "Summer Pants"
+      ],
+      "created_at": "2026-05-22T19:14:23+05:30",
+      "options": [
+        {
+          "name": "Size",
+          "values": [
+            "28",
+            "30",
+            "32",
+            "34",
+            "36",
+            "38",
+            "40"
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "id": 48209850532099,
+          "title": "28",
+          "option1": "28",
+          "option2": null,
+          "price": "1888.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 48209850564867,
+          "title": "30",
+          "option1": "30",
+          "option2": null,
+          "price": "1888.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 48209850597635,
+          "title": "32",
+          "option1": "32",
+          "option2": null,
+          "price": "1888.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 48209850630403,
+          "title": "34",
+          "option1": "34",
+          "option2": null,
+          "price": "1888.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 48209850663171,
+          "title": "36",
+          "option1": "36",
+          "option2": null,
+          "price": "1888.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 48209850695939,
+          "title": "38",
+          "option1": "38",
+          "option2": null,
+          "price": "1888.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 48209850728707,
+          "title": "40",
+          "option1": "40",
+          "option2": null,
+          "price": "1888.00",
+          "compare_at_price": null,
+          "available": true
+        }
+      ],
+      "images": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/IMG_4309.png?v=1789990726",
+          "width": 1086,
+          "height": 1448
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/IMG_4307.png?v=1789990726",
+          "width": 1086,
+          "height": 1448
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/IMG_4310.png?v=1789990726",
+          "width": 1086,
+          "height": 1448
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/IMG_4311.png?v=1789990725",
+          "width": 1086,
+          "height": 1448
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/IMG_4312.png?v=1789990725",
+          "width": 1086,
+          "height": 1448
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/IMG_4308.png?v=1789990726",
+          "width": 1086,
+          "height": 1448
+        }
+      ]
+    },
+    {
+      "id": 9432924750083,
+      "handle": "korean-2-way-lycra-pant",
+      "title": "Korean Pant - Obsidian Black",
+      "body_html": "<p>Upgrade your everyday wardrobe with the Korean Pant, designed for a clean modern look and flexible all-day comfort. The 2-way lycra fabric gives comfortable stretch while keeping the pant structured and stylish for casual, office, and semi-formal wear.</p>\n<ul>\n<li>Modern Korean-inspired fit</li>\n<li>Comfortable 2-way stretch fabric</li>\n<li>Ideal for daily wear, office wear, and smart casual looks</li>\n<li>Available in multiple classic colours</li>\n</ul>",
+      "product_type": "Korean 2 Way Lycra",
+      "tags": [
+        "2 Way Lycra",
+        "Korean Pant",
+        "Men",
+        "Pants",
+        "Stretch Pants"
+      ],
+      "created_at": "2026-05-22T19:14:21+05:30",
+      "options": [
+        {
+          "name": "Size",
+          "values": [
+            "28",
+            "30",
+            "32",
+            "34",
+            "36",
+            "38",
+            "40"
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "id": 48209849221379,
+          "title": "28",
+          "option1": "28",
+          "option2": null,
+          "price": "1444.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 48209849254147,
+          "title": "30",
+          "option1": "30",
+          "option2": null,
+          "price": "1444.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 48209849286915,
+          "title": "32",
+          "option1": "32",
+          "option2": null,
+          "price": "1444.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 48209849319683,
+          "title": "34",
+          "option1": "34",
+          "option2": null,
+          "price": "1444.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 48209849352451,
+          "title": "36",
+          "option1": "36",
+          "option2": null,
+          "price": "1444.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 48209849385219,
+          "title": "38",
+          "option1": "38",
+          "option2": null,
+          "price": "1444.00",
+          "compare_at_price": null,
+          "available": true
+        },
+        {
+          "id": 48209849417987,
+          "title": "40",
+          "option1": "40",
+          "option2": null,
+          "price": "1444.00",
+          "compare_at_price": null,
+          "available": true
+        }
+      ],
+      "images": [
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/IMG_4180.jpg?v=1789719801",
+          "width": 1086,
+          "height": 1448
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/IMG_4179.jpg?v=1789719801",
+          "width": 1086,
+          "height": 1448
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/IMG_4181.jpg?v=1789719802",
+          "width": 1086,
+          "height": 1448
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/IMG_4177.png?v=1789719805",
+          "width": 1086,
+          "height": 1448
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/IMG_4178.png?v=1789719805",
+          "width": 1086,
+          "height": 1448
+        },
+        {
+          "src": "https://cdn.shopify.com/s/files/1/0819/7786/8547/files/IMG_4182.jpg?v=1789719804",
+          "width": 1086,
+          "height": 1448
+        }
+      ]
+    }
+  ]
+}

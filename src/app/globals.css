@@ -1,0 +1,308 @@
+@import "tailwindcss";
+
+/*
+ * FILO — quiet, monochrome, editorial.
+ * Two themes (light / dark) driven by html[data-theme]. Components use the
+ * semantic tokens (bg, elev, surface, fg, muted, line) so they work in both.
+ * Colour lives in the photography and the poster series.
+ */
+
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
+@theme {
+  --font-sans: var(--font-archivo), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains), ui-monospace, monospace;
+  --font-serif: var(--font-instrument), ui-serif, Georgia, serif;
+
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out-quart: cubic-bezier(0.76, 0, 0.24, 1);
+
+  --animate-marquee: marquee 40s linear infinite;
+
+  @keyframes marquee {
+    to {
+      transform: translateX(-50%);
+    }
+  }
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-elev: var(--elev);
+  --color-surface: var(--surface);
+  --color-fg: var(--fg);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+}
+
+@layer base {
+  :root {
+    --bg: #f5f4f1;
+    --elev: #ffffff;
+    --surface: #e9e7e2;
+    --fg: #141414;
+    --muted: #6f6d68;
+    --line: rgb(20 20 20 / 0.1);
+    color-scheme: light;
+
+    --header-h: 5.75rem;
+    --header-offset: var(--header-h);
+  }
+  :root[data-theme="dark"] {
+    --bg: #0f0f0e;
+    --elev: #171716;
+    --surface: #1e1e1c;
+    --fg: #ecebe6;
+    --muted: #8f8d87;
+    --line: rgb(236 235 230 / 0.1);
+    color-scheme: dark;
+  }
+  /* Inverse panels (footer, feature bands) flip to the opposite theme. */
+  .inverse {
+    --bg: #141414;
+    --elev: #1c1c1b;
+    --surface: #232321;
+    --fg: #ecebe6;
+    --muted: #96948e;
+    --line: rgb(236 235 230 / 0.12);
+    background-color: var(--bg);
+    color: var(--fg);
+  }
+  :root[data-theme="dark"] .inverse {
+    --bg: #ecebe6;
+    --elev: #f5f4f1;
+    --surface: #dddbd5;
+    --fg: #141414;
+    --muted: #64625d;
+    --line: rgb(20 20 20 / 0.12);
+  }
+
+  @media (min-width: 48rem) {
+    :root {
+      --header-h: 6.25rem;
+    }
+  }
+  html[data-header="hidden"] {
+    --header-offset: 0px;
+  }
+
+  html {
+    -webkit-tap-highlight-color: transparent;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--fg);
+    font-family: var(--font-sans);
+    transition:
+      background-color 0.4s ease,
+      color 0.4s ease;
+  }
+
+  ::selection {
+    background: var(--fg);
+    color: var(--bg);
+  }
+
+  :focus-visible {
+    outline: 1.5px solid var(--fg);
+    outline-offset: 3px;
+  }
+
+  button {
+    cursor: pointer;
+  }
+}
+
+@utility container-x {
+  width: 100%;
+  margin-inline: auto;
+  max-width: 1720px;
+  padding-inline: clamp(1rem, 2.8vw, 3rem);
+}
+
+/* Large editorial headlines — slightly condensed, tightly set. */
+@utility type-display {
+  font-variation-settings: "wdth" 80;
+  font-weight: 460;
+  letter-spacing: -0.045em;
+  line-height: 0.92;
+}
+
+@utility type-heading {
+  font-variation-settings: "wdth" 88;
+  font-weight: 500;
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+
+@utility type-label {
+  font-size: 0.6875rem;
+  line-height: 1.3;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+@layer components {
+  /* Long-form copy (journal, policies). */
+  .prose-filo {
+    font-size: 1.0625rem;
+    line-height: 1.75;
+    color: color-mix(in oklab, var(--fg) 80%, transparent);
+  }
+  .prose-filo > * + * {
+    margin-top: 1.1em;
+  }
+  .prose-filo h1,
+  .prose-filo h2 {
+    font-variation-settings: "wdth" 88;
+    font-weight: 500;
+    letter-spacing: -0.03em;
+    font-size: clamp(1.75rem, 3vw, 2.4rem);
+    line-height: 1.05;
+    color: var(--fg);
+    margin-top: 2em;
+  }
+  .prose-filo h3,
+  .prose-filo h4 {
+    font-weight: 600;
+    font-size: 1.125rem;
+    color: var(--fg);
+    margin-top: 1.8em;
+  }
+  .prose-filo > :first-child {
+    margin-top: 0;
+  }
+  .prose-filo ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  .prose-filo ul li {
+    position: relative;
+    padding-left: 1.3em;
+  }
+  .prose-filo ul li + li {
+    margin-top: 0.35em;
+  }
+  .prose-filo ul li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.75em;
+    width: 0.5em;
+    height: 1px;
+    background: currentColor;
+  }
+  .prose-filo ol {
+    list-style: decimal;
+    padding-left: 1.25em;
+  }
+  .prose-filo strong {
+    color: var(--fg);
+    font-weight: 600;
+  }
+  .prose-filo a {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  .prose-filo hr {
+    border: 0;
+    border-top: 1px solid var(--line);
+    margin-block: 2.5em;
+  }
+
+  /* Hide the entry loader before first paint on repeat visits. */
+  html[data-intro="seen"] .preloader {
+    display: none;
+  }
+
+}
+
+/* Theme switch: circular reveal via the View Transitions API. */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}
+
+/* Lenis smooth scrolling */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.no-scrollbar {
+  scrollbar-width: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+/* Italic accents inside headlines switch to the serif. */
+.type-display em,
+.type-heading em {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: 0;
+  font-variation-settings: normal;
+}
+
+/* Unlayered so it outranks utility classes (e.g. the header's z-40). */
+/*
+ * Entry sequence: the header sits above the loader but stays invisible
+ * until the wordmark has docked into its place, then fades in around it.
+ */
+html[data-intro-phase] header {
+  z-index: 90;
+}
+html[data-intro-phase="loading"] header,
+html[data-intro-phase="docking"] header {
+  pointer-events: none;
+}
+.intro-hide {
+  transition:
+    opacity 0.8s var(--ease-out-expo),
+    transform 0.8s var(--ease-out-expo);
+}
+html[data-intro-phase="loading"] .intro-hide,
+html[data-intro-phase="docking"] .intro-hide {
+  opacity: 0;
+  transform: translateY(-8px);
+}
+html[data-intro-phase="loading"] .intro-logo,
+html[data-intro-phase="docking"] .intro-logo {
+  opacity: 0;
+}
+
+/* Animated film grain for the hero film. */
+.film-grain {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  animation: grain 0.8s steps(6) infinite;
+}
+@keyframes grain {
+  0% { transform: translate(0, 0); }
+  20% { transform: translate(-6%, 4%); }
+  40% { transform: translate(5%, -7%); }
+  60% { transform: translate(-3%, 8%); }
+  80% { transform: translate(7%, 2%); }
+  100% { transform: translate(0, 0); }
+}
