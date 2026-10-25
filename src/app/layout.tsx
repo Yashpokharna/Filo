@@ -11,7 +11,7 @@ import { Preloader } from "@/components/layout/preloader";
 import { SearchOverlay } from "@/components/layout/search-overlay";
 import { SmoothScroll } from "@/components/layout/smooth-scroll";
 import { themeScript } from "@/components/layout/theme-toggle";
-import { categories, getStyleLeads } from "@/lib/catalog";
+import { categories, colourwayHref, getStyleLeads } from "@/lib/catalog";
 import { SITE_URL, site } from "@/lib/site";
 import "./globals.css";
 
@@ -50,7 +50,7 @@ export default async function RootLayout({ children }: LayoutProps<"/">) {
     label: c.label,
     blurb: c.blurb,
   }));
-  const megaTiles: MegaTile[] = ["ease", "linen-pant", "korean-pant"]
+  const megaTiles: MegaTile[] = ["ease", "linen-pant", "korean-stretch-pant"]
     .map((f) => leads.find((p) => p.family === f))
     .filter((p) => p !== undefined)
     .map((p) => ({
@@ -82,7 +82,7 @@ export default async function RootLayout({ children }: LayoutProps<"/">) {
           <Header megaLinks={megaLinks} megaTiles={megaTiles} />
           <main id="main">{children}</main>
           <Footer images={leads.map((p) => `${p.images[0].src}&width=700`)} />
-          <CartDrawer />
+          <CartDrawer easeHref={colourwayHref(leads, "ease")} />
           <SearchOverlay />
           <MobileMenu megaLinks={megaLinks} />
           <Cursor />

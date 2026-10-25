@@ -11,7 +11,8 @@ import { formatPrice } from "@/lib/format";
 import { site } from "@/lib/site";
 import { cartActions, checkoutUrl, MAX_QTY, overlay, useCart, useOverlays } from "@/lib/store";
 
-export function CartDrawer() {
+/** `easeHref` comes from the catalog, since Shopify handles change when products are renamed. */
+export function CartDrawer({ easeHref }: { easeHref: string }) {
   const { cart: open } = useOverlays();
   const { lines, count, subtotal } = useCart();
   const close = () => overlay.close("cart");
@@ -34,7 +35,7 @@ export function CartDrawer() {
             Start with FILO Ease — the wrinkle-free trouser that needs no iron.
           </p>
           <div className="mt-2 flex flex-wrap justify-center gap-2">
-            <ButtonLink href="/products/filo-ease" onClick={close} data-autofocus>
+            <ButtonLink href={easeHref} onClick={close} data-autofocus>
               Shop FILO Ease
             </ButtonLink>
             <ButtonLink href="/shop" onClick={close} variant="outline">

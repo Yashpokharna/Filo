@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { PostersExperience } from "@/components/posters/exhibition";
-import { posters } from "@/lib/posters";
+import { getPosters } from "@/lib/posters";
+
+export const revalidate = 900;
 
 export const metadata: Metadata = {
   title: "The Gallery — Poster Series",
@@ -9,6 +11,6 @@ export const metadata: Metadata = {
   alternates: { canonical: "/posters" },
 };
 
-export default function PostersPage() {
-  return <PostersExperience posters={posters} />;
+export default async function PostersPage() {
+  return <PostersExperience posters={await getPosters()} />;
 }
