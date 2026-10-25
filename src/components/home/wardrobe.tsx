@@ -7,20 +7,12 @@ import {
   motion,
   useInView,
   useMotionValue,
+  useMotionValueEvent,
   useReducedMotion,
+  useScroll,
   type AnimationPlaybackControls,
 } from "motion/react";
-import Link from "next/link";
-import {
-  useCallback,
-  useEffect,
-  useId,
-  useLayoutEffect,
-  useRef,
-  useState,
-  type CSSProperties,
-  type RefObject,
-} from "react";
+import { useCallback, useEffect, useId, useLayoutEffect, useRef, useState, type RefObject } from "react";
 import { createPortal } from "react-dom";
 import { EASE } from "@/components/motion";
 import { ButtonLink, TextLink } from "@/components/ui/button";
@@ -33,7 +25,8 @@ export type WardrobeColour = {
   handle: string;
   color: string;
   swatch: string;
-  image: string;
+  /** Up to two photographs: front, then an alternate view. */
+  images: string[];
   available: boolean;
 };
 
@@ -47,243 +40,64 @@ export type WardrobeItem = {
   colours: WardrobeColour[];
 };
 
-/* ----------------------------------------------------------------- cuts -- */
-
-/**
- * Trouser silhouettes, drawn in a 120-unit-wide box. Leg x values describe the
- * left leg; the right leg mirrors them.
- */
-type Cut = {
-  /** viewBox height. */
-  h: number;
-  hem: number;
-  outer: number;
-  inner: number;
-  /** Outer and inner x at the knee. */
-  knee: [number, number];
-  waist: "belt" | "elastic" | "buckle";
-  pleats?: 0 | 1 | 2;
-  crease?: boolean;
-  cuff?: boolean;
-};
-
-const STRAIGHT: Cut = { h: 340, hem: 334, outer: 17, inner: 56, knee: [14, 57], waist: "belt" };
-const SLIM: Cut = { ...STRAIGHT, outer: 23, inner: 55.5, knee: [18, 57] };
-
-const CUTS: Record<string, Cut> = {
-  ease: { ...STRAIGHT, crease: true },
-  "travel-pant": { ...STRAIGHT, outer: 25, inner: 55, knee: [17.5, 57], waist: "elastic", cuff: true },
-  "linen-pant": { ...STRAIGHT, outer: 13, inner: 57, knee: [11.5, 57.5], waist: "elastic" },
-  "korean-stretch-pant": { ...STRAIGHT, outer: 3.5, inner: 58.5, knee: [7, 58], pleats: 2 },
-  "flexi-trouser": SLIM,
-  "9to5": { ...STRAIGHT, crease: true, pleats: 1 },
-  "buckle-tailored": { ...STRAIGHT, waist: "buckle", pleats: 1, crease: true },
-  "buckle-utility": { ...SLIM, waist: "buckle", pleats: 2 },
-  "air-linen-shorts": { ...STRAIGHT, h: 172, hem: 166, outer: 6, inner: 58, knee: [8, 58], waist: "elastic" },
-  classic: STRAIGHT,
-};
-
-const cutOf = (family: string) => CUTS[family] ?? STRAIGHT;
-
-const CROTCH = 114;
-const HIP = 62;
-
-function outline(c: Cut, top: number) {
-  const ky = CROTCH + (c.hem - CROTCH) * 0.55;
-  const [ko, ki] = c.knee;
-  const up = (ky - HIP) * 0.45;
-  const dn = (ky - HIP) * 0.3;
-  const cr = ky - CROTCH;
-  const R = (x: number) => +(120 - x).toFixed(2);
-  return [
-    `M14 ${top} L106 ${top}`,
-    `Q109.6 ${top + 22} 109 ${HIP}`,
-    `C109 ${HIP + up} ${R(ko)} ${ky - dn} ${R(ko)} ${ky}`,
-    `L${R(c.outer)} ${c.hem} L${R(c.inner)} ${c.hem} L${R(ki)} ${ky}`,
-    `C${R(ki)} ${ky - cr * 0.5} 62.6 ${CROTCH + cr * 0.25} 62 ${CROTCH + 3}`,
-    `Q60 ${CROTCH - 4} 58 ${CROTCH + 3}`,
-    `C57.4 ${CROTCH + cr * 0.25} ${ki} ${ky - cr * 0.5} ${ki} ${ky}`,
-    `L${c.inner} ${c.hem} L${c.outer} ${c.hem} L${ko} ${ky}`,
-    `C${ko} ${ky - dn} 11 ${HIP + up} 11 ${HIP}`,
-    `Q10.4 ${top + 22} 14 ${top} Z`,
-  ].join(" ");
-}
-
-const mirror = (d: string) => <path d={d} transform="matrix(-1 0 0 1 120 0)" />;
+/* ---------------------------------------------------------------- print -- */
 
 /** useId, reduced to characters that are safe inside url(#…) references. */
 const useSvgId = () => `w${useId().replace(/[^a-zA-Z0-9_-]/g, "")}`;
 
-/** A pair of trousers as a shaded technical flat, filled with the colourway. */
-function Trouser({ family, swatch, className }: { family: string; swatch: string; className?: string }) {
-  const c = cutOf(family);
-  const id = useSvgId();
-  const band = c.waist === "elastic" ? 15 : 13;
-  const d = outline(c, band);
-  const ky = CROTCH + (c.hem - CROTCH) * 0.55;
-  const stitch = { fill: "none", stroke: "rgb(255 255 255 / 0.26)", strokeWidth: 0.55, strokeDasharray: "1.5 1.1" };
-  const seam = { fill: "none", stroke: "rgb(0 0 0 / 0.26)", strokeWidth: 0.6 };
-  const pleatX = c.pleats === 2 ? [41, 34] : c.pleats === 1 ? [40] : [];
+/** Image sizes on the rail; the fitting room layers a sharper copy on top. */
+const RAIL_SIZES = "(min-width:768px) 210px, 40vw";
+const STAGE_SIZES = "(min-width:768px) 36vw, 80vw";
 
+/**
+ * A lookbook print: the colourway's photograph on matte paper, gripped by the
+ * hanger clips. Padding is in % of width so the print scales as one piece
+ * (5 : 7) between the rail, the flight and the stage.
+ */
+function Print({
+  colour,
+  label,
+  view = 0,
+  sharp = false,
+  className,
+}: {
+  colour: WardrobeColour;
+  label: string;
+  /** Which photograph of the colourway to show. */
+  view?: number;
+  /** Add a high-resolution layer (fitting room). */
+  sharp?: boolean;
+  className?: string;
+}) {
+  const src = colour.images[view] ?? colour.images[0];
   return (
-    <svg
-      viewBox={`0 0 120 ${c.h}`}
-      className={cn("block h-auto w-full overflow-visible", className)}
-      style={{ "--cloth": swatch } as CSSProperties}
-      aria-hidden
+    <div
+      className={cn(
+        "@container relative bg-[#f4f0e7] px-[5%] pb-[16%] pt-[6%] shadow-[0_22px_34px_-16px_var(--cast),0_2px_5px_rgb(0_0_0/0.1)]",
+        className,
+      )}
     >
-      <defs>
-        <linearGradient id={`${id}l`} x1="0" x2="120" y1="0" y2="0" gradientUnits="userSpaceOnUse">
-          <stop offset="0" stopColor="#000" stopOpacity="0.32" />
-          <stop offset="0.07" stopColor="#000" stopOpacity="0.08" />
-          <stop offset="0.2" stopColor="#fff" stopOpacity="0.09" />
-          <stop offset="0.34" stopColor="#fff" stopOpacity="0.02" />
-          <stop offset="0.45" stopColor="#000" stopOpacity="0.14" />
-          <stop offset="0.5" stopColor="#000" stopOpacity="0.28" />
-          <stop offset="0.55" stopColor="#000" stopOpacity="0.14" />
-          <stop offset="0.66" stopColor="#fff" stopOpacity="0.02" />
-          <stop offset="0.8" stopColor="#fff" stopOpacity="0.09" />
-          <stop offset="0.93" stopColor="#000" stopOpacity="0.08" />
-          <stop offset="1" stopColor="#000" stopOpacity="0.32" />
-        </linearGradient>
-        <linearGradient id={`${id}v`} x1="0" x2="0" y1="0" y2={c.h} gradientUnits="userSpaceOnUse">
-          <stop offset={band / c.h} stopColor="#000" stopOpacity="0.3" />
-          <stop offset={(band + 18) / c.h} stopColor="#000" stopOpacity="0" />
-          <stop offset="0.86" stopColor="#000" stopOpacity="0" />
-          <stop offset="1" stopColor="#000" stopOpacity="0.16" />
-        </linearGradient>
-        <linearGradient id={`${id}b`} x1="0" x2="0" y1="0" y2="1">
-          <stop offset="0" stopColor="#fff" stopOpacity="0.22" />
-          <stop offset="0.5" stopColor="#fff" stopOpacity="0" />
-          <stop offset="1" stopColor="#000" stopOpacity="0.22" />
-        </linearGradient>
-        <radialGradient id={`${id}c`} cx="60" cy={CROTCH} r="34" gradientUnits="userSpaceOnUse">
-          <stop offset="0" stopColor="#000" stopOpacity="0.3" />
-          <stop offset="1" stopColor="#000" stopOpacity="0" />
-        </radialGradient>
-        <filter id={`${id}n`} x="0" y="0" width="100%" height="100%">
-          <feTurbulence type="fractalNoise" baseFrequency="0.85 0.3" numOctaves="2" seed="4" />
-          <feColorMatrix values="0.33 0.33 0.33 0 0 0.33 0.33 0.33 0 0 0.33 0.33 0.33 0 0 0 0 0 0 1" />
-        </filter>
-        <clipPath id={`${id}k`}>
-          <path d={d} />
-          <rect x="14" y="0" width="92" height={band} />
-        </clipPath>
-      </defs>
-
-      {/* Cloth */}
-      <g className="cloth">
-        <path d={d} />
-        <rect x="14" y="0" width="92" height={band} rx={c.waist === "elastic" ? 2 : 1.2} />
-      </g>
-
-      {/* Form and light */}
-      <path d={d} fill={`url(#${id}l)`} />
-      <path d={d} fill={`url(#${id}v)`} />
-      <path d={d} fill={`url(#${id}c)`} />
-      <rect x="14" y="0" width="92" height={band} rx="1.2" fill={`url(#${id}b)`} />
-      <g clipPath={`url(#${id}k)`}>
-        <rect width="120" height={c.h} filter={`url(#${id}n)`} opacity="0.16" style={{ mixBlendMode: "overlay" }} />
-      </g>
-
-      {/* Construction */}
-      <path d={`M14 ${band} H106`} {...seam} />
-      <path d={`M15.5 ${band - 2} H104.5`} {...stitch} />
-
-      {c.waist === "elastic" ? (
-        <g>
-          {Array.from({ length: 29 }, (_, i) => (
-            <path key={i} d={`M${16.5 + i * 3.1} 3 V${band - 3}`} stroke="rgb(0 0 0 / 0.16)" strokeWidth="0.5" />
-          ))}
-          <path d="M57.5 9 C56.5 19 54 27 55 38" fill="none" stroke="#ece6d8" strokeWidth="1.3" strokeLinecap="round" />
-          <path d="M62.5 9 C63.5 19 66.5 26 65.5 36" fill="none" stroke="#ece6d8" strokeWidth="1.3" strokeLinecap="round" />
-          <rect x="54" y="37" width="2" height="4" rx="0.6" fill="#b9bcc0" />
-          <rect x="64.6" y="35" width="2" height="4" rx="0.6" fill="#b9bcc0" />
-          <circle cx="57.5" cy="8.5" r="1.1" fill="#b9bcc0" />
-          <circle cx="62.5" cy="8.5" r="1.1" fill="#b9bcc0" />
-        </g>
-      ) : (
-        <g>
-          {/* Belt loops */}
-          {[24, 44, 76, 96].map((x) => (
-            <g key={x}>
-              <rect x={x - 1.6} y="-1.5" width="3.2" height={band + 3} rx="0.8" className="cloth" />
-              <rect x={x - 1.6} y="-1.5" width="3.2" height={band + 3} rx="0.8" fill="rgb(0 0 0 / 0.07)" />
-              <path d={`M${x - 1.6} -1.5 h3.2`} stroke="rgb(255 255 255 / 0.3)" strokeWidth="0.5" />
-            </g>
-          ))}
-          <circle cx="60" cy={band / 2} r="2" fill="#a9adb2" />
-          <circle cx="59.6" cy={band / 2 - 0.4} r="0.9" fill="#e6e8ea" />
-          {/* Fly */}
-          <path d={`M60 ${band} V${HIP}`} {...seam} />
-          <path d={`M64.5 ${band + 1} V${HIP - 7} Q64.5 ${HIP} 58.5 ${HIP + 1.5}`} {...stitch} />
-        </g>
-      )}
-
-      {c.waist === "buckle" && (
-        <g>
-          {[0, 1].map((side) => (
-            <g key={side} transform={side ? "matrix(-1 0 0 1 120 0)" : undefined}>
-              <rect x="14" y="3.2" width="13" height="6.6" rx="1" className="cloth" />
-              <rect x="14" y="3.2" width="13" height="6.6" rx="1" fill="rgb(0 0 0 / 0.22)" />
-              <rect x="22" y="2" width="5.4" height="9" rx="1.2" fill="none" stroke="#c4c7cb" strokeWidth="1.2" />
-              <path d="M24.7 2.6 V10.4" stroke="#8d9196" strokeWidth="0.7" />
-            </g>
-          ))}
-        </g>
-      )}
-
-      {/* Front pockets */}
-      <path d={`M24 ${band} Q27 ${band + 24} 11.6 ${band + 42}`} {...seam} />
-      <g {...seam}>{mirror(`M24 ${band} Q27 ${band + 24} 11.6 ${band + 42}`)}</g>
-      <path d={`M26.2 ${band + 1} Q29 ${band + 24} 12.2 ${band + 45}`} {...stitch} />
-      <g {...stitch}>{mirror(`M26.2 ${band + 1} Q29 ${band + 24} 12.2 ${band + 45}`)}</g>
-
-      {/* Pleats */}
-      {pleatX.map((x) => (
-        <g key={x} {...seam}>
-          <path d={`M${x} ${band} Q${x + 0.6} ${band + 22} ${x - 1.2} ${band + 40}`} />
-          {mirror(`M${x} ${band} Q${x + 0.6} ${band + 22} ${x - 1.2} ${band + 40}`)}
-        </g>
-      ))}
-
-      {/* Pressed crease */}
-      {c.crease && (
-        <g fill="none" stroke="rgb(255 255 255 / 0.2)" strokeWidth="0.8">
-          <path d={`M36 ${band + 40} L${(c.outer + c.inner) / 2} ${c.hem - 2}`} />
-          {mirror(`M36 ${band + 40} L${(c.outer + c.inner) / 2} ${c.hem - 2}`)}
-        </g>
-      )}
-
-      {/* Hems and cuffs */}
-      {c.cuff ? (
-        <g>
-          {[0, 1].map((side) => (
-            <g key={side} transform={side ? "matrix(-1 0 0 1 120 0)" : undefined}>
-              <path
-                d={`M${c.outer + 0.2} ${c.hem - 10} L${c.inner - 0.1} ${c.hem - 10} L${c.inner} ${c.hem} L${c.outer} ${c.hem} Z`}
-                fill="rgb(0 0 0 / 0.16)"
-              />
-              {Array.from({ length: 10 }, (_, i) => {
-                const x = c.outer + 2 + ((c.inner - c.outer - 4) / 9) * i;
-                return <path key={i} d={`M${x} ${c.hem - 9} V${c.hem - 1}`} stroke="rgb(0 0 0 / 0.18)" strokeWidth="0.5" />;
-              })}
-            </g>
-          ))}
-        </g>
-      ) : (
-        <g {...stitch}>
-          <path d={`M${c.outer + 0.8} ${c.hem - 5} L${c.inner - 0.6} ${c.hem - 5}`} />
-          {mirror(`M${c.outer + 0.8} ${c.hem - 5} L${c.inner - 0.6} ${c.hem - 5}`)}
-        </g>
-      )}
-
-      {/* Soft drape folds near the knee */}
-      <g fill="none" stroke="rgb(0 0 0 / 0.1)" strokeWidth="0.9" strokeLinecap="round">
-        <path d={`M${c.knee[0] + 6} ${ky - 6} q8 4 16 1`} />
-        {mirror(`M${c.knee[0] + 6} ${ky + 4} q8 4 16 1`)}
-      </g>
-    </svg>
+      <div className="relative aspect-[3/4] overflow-hidden bg-[#e4e1da]">
+        <AnimatePresence initial={false}>
+          <motion.div
+            key={src}
+            className="absolute inset-0"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0, transition: { duration: 0.5, delay: 0.15 } }}
+            transition={{ duration: 0.5 }}
+          >
+            <Image src={src} alt="" fill sizes={RAIL_SIZES} className="object-cover" />
+            {sharp && <Image src={src} alt="" fill sizes={STAGE_SIZES} className="object-cover" />}
+          </motion.div>
+        </AnimatePresence>
+        <span className="pointer-events-none absolute inset-0 shadow-[inset_0_0_0_1px_rgb(0_0_0/0.06)]" />
+      </div>
+      <p className="absolute inset-x-[5%] bottom-[5%] flex items-baseline justify-between font-mono text-[5cqw] leading-none tracking-normal text-black/55">
+        <span>FILO</span>
+        <span className="truncate pl-2">{label}</span>
+      </p>
+    </div>
   );
 }
 
@@ -409,7 +223,7 @@ function Slot({
   const reduce = useReducedMotion();
   const rotate = useMotionValue(0);
   const no = String(index + 1).padStart(2, "0");
-  const swatch = item.colours[colour]?.swatch ?? "#bdb6ab";
+  const look = item.colours[colour] ?? item.colours[0];
 
   // A pendulum: each kick adds angular velocity (deg/s) and lets it ring out.
   const kick = useCallback<Kick>(
@@ -434,7 +248,7 @@ function Slot({
 
   return (
     <li
-      className="@container relative flex w-[36vw] shrink-0 snap-center flex-col sm:w-[22vw] md:w-auto md:min-w-0 md:max-w-[172px] md:flex-1"
+      className="@container relative flex w-[46vw] shrink-0 snap-start flex-col sm:w-[28vw] md:w-[clamp(160px,14.5vw,224px)]"
       style={{ zIndex: hovered ? 20 : undefined }}
       onPointerEnter={(e) => onEnter(index, e)}
     >
@@ -460,14 +274,14 @@ function Slot({
             >
               <Hanger />
               {/* Hidden while it's in the fitting room; shown again the instant it lands back. */}
-              <div ref={garment} className="relative -mt-[9.1667cqw]" style={{ opacity: out ? 0 : 1 }}>
+              <div ref={garment} className="relative mx-auto -mt-[7.5cqw] w-[84%]" style={{ opacity: out ? 0 : 1 }}>
                 <div
                   className={cn(
                     "transition-[opacity,filter] duration-700 ease-out-expo",
-                    dimmed && "md:opacity-80 md:saturate-[0.55]",
+                    dimmed && "md:opacity-75 md:saturate-[0.35]",
                   )}
                 >
-                  <Trouser family={item.family} swatch={swatch} className="garment-shadow" />
+                  <Print colour={look} label={look.color} />
                 </div>
                 <AnimatePresence>
                   {hovered && !out && <HangTag no={no} item={item} flip={index >= total - 2} />}
@@ -478,7 +292,7 @@ function Slot({
         </motion.div>
       </motion.div>
 
-      <div className="mt-auto flex flex-col items-center gap-1.5 px-1 pt-14 text-center">
+      <div className="mt-auto flex flex-col items-center gap-1.5 px-1 pt-20 text-center">
         <span className="font-mono text-[10px] text-muted">{no}</span>
         <span
           className={cn(
@@ -492,7 +306,10 @@ function Slot({
           {item.colours.slice(0, 6).map((c, ci) => (
             <span
               key={c.handle}
-              className={cn("size-1.5 rounded-full", ci === colour && "ring-1 ring-fg ring-offset-1 ring-offset-surface")}
+              className={cn(
+                "size-1.5 rounded-full",
+                ci === colour && "ring-1 ring-fg ring-offset-1 ring-offset-surface",
+              )}
               style={{ background: c.swatch, boxShadow: "inset 0 0 0 0.5px rgb(127 127 127 / 0.5)" }}
             />
           ))}
@@ -523,6 +340,17 @@ export function Wardrobe({ items }: { items: WardrobeItem[] }) {
   const triggers = useRef<(HTMLButtonElement | null)[]>([]);
   const pointer = useRef({ x: 0, t: 0, v: 0 });
   const scroll = useRef(0);
+  const track = useRef<HTMLUListElement>(null);
+  const { scrollXProgress } = useScroll({ container: track });
+  const [edges, setEdges] = useState({ start: true, end: false });
+
+  useMotionValueEvent(scrollXProgress, "change", (v) => setEdges({ start: v < 0.01, end: v > 0.99 }));
+
+  // Slide the rail by about half its visible width.
+  const slide = (dir: 1 | -1) => {
+    const el = track.current;
+    if (el) el.scrollBy({ left: dir * el.clientWidth * 0.6, behavior: "smooth" });
+  };
 
   const register = useCallback((i: number, k: Kick | null) => {
     kicks.current[i] = k;
@@ -587,71 +415,103 @@ export function Wardrobe({ items }: { items: WardrobeItem[] }) {
   };
 
   return (
-    <div
-      ref={rack}
-      className="wardrobe relative overflow-hidden rounded-[clamp(1rem,2vw,1.75rem)] [--rail:52px] md:[--rail:76px]"
-      onPointerMove={onMove}
-      onPointerLeave={() => setHover(null)}
-    >
-      {/* Ceiling mounts */}
-      <div aria-hidden className="pointer-events-none absolute inset-x-[5%] top-0 hidden h-[var(--rail)] md:block">
-        {["left-0", "right-0"].map((side) => (
-          <span key={side} className={cn("wardrobe-rod absolute top-0 h-full w-[3px]", side)}>
-            <span className="absolute -left-[5px] top-0 h-1.5 w-[13px] rounded-b-sm bg-[#8d9196]" />
-          </span>
-        ))}
-      </div>
-      {/* The rail */}
+    <div>
       <div
-        aria-hidden
-        className="wardrobe-rail pointer-events-none absolute inset-x-0 top-[calc(var(--rail)-4px)] z-[1] h-2 md:inset-x-[4.6%] md:rounded-full"
-      />
-
-      <ul
-        aria-label="Every FILO style"
-        onScroll={onScroll}
-        className="no-scrollbar relative z-[2] flex snap-x snap-mandatory overflow-x-auto px-[7vw] pt-[var(--rail)] md:justify-center md:overflow-visible md:px-[6%]"
+        ref={rack}
+        className="wardrobe relative overflow-hidden rounded-[clamp(1rem,2vw,1.75rem)] [--rail:52px] md:[--rail:76px]"
+        onPointerMove={onMove}
+        onPointerLeave={() => setHover(null)}
       >
-        {items.map((item, i) => (
-          <Slot
-            key={item.family}
-            item={item}
-            index={i}
-            total={items.length}
-            colour={colours[i]}
-            hovered={hover === i}
-            dimmed={hover !== null && hover !== i}
-            offset={offsetFor(i)}
-            out={open === i}
-            shown={(inView && ready) || !!reduce}
-            register={register}
-            garment={(el) => {
-              garments.current[i] = el;
-            }}
-            trigger={(el) => {
-              triggers.current[i] = el;
-            }}
-            onEnter={onEnter}
-            onOpen={take}
-          />
-        ))}
-      </ul>
-
-      <div aria-hidden className="wardrobe-floor pointer-events-none absolute inset-x-0 bottom-0 h-[6.75rem]" />
-
-      {open !== null && from && (
-        <FittingRoom
-          item={items[open]}
-          index={open}
-          total={items.length}
-          colour={colours[open]}
-          onColour={(c) => setColours((all) => all.map((v, j) => (j === open ? c : v)))}
-          from={from}
-          target={() => garments.current[open]?.getBoundingClientRect() ?? null}
-          onStep={step}
-          onReturned={returned}
+        {/* Ceiling mounts */}
+        <div aria-hidden className="pointer-events-none absolute inset-x-[8%] top-0 hidden h-[var(--rail)] md:block">
+          {["left-0", "right-0"].map((side) => (
+            <span key={side} className={cn("wardrobe-rod absolute top-0 h-full w-[3px]", side)}>
+              <span className="absolute -left-[5px] top-0 h-1.5 w-[13px] rounded-b-sm bg-[#8d9196]" />
+            </span>
+          ))}
+        </div>
+        {/* The rail runs wall to wall; the hangers slide along it. */}
+        <div
+          aria-hidden
+          className="wardrobe-rail pointer-events-none absolute inset-x-0 top-[calc(var(--rail)-4px)] z-[1] h-2"
         />
-      )}
+
+        <ul
+          ref={track}
+          aria-label="Every FILO style"
+          onScroll={onScroll}
+          className="no-scrollbar relative z-[2] flex snap-x snap-mandatory scroll-px-[6vw] overflow-x-auto px-[6vw] pt-[var(--rail)] md:scroll-px-[4%] md:px-[4%]"
+        >
+          {items.map((item, i) => (
+            <Slot
+              key={item.family}
+              item={item}
+              index={i}
+              total={items.length}
+              colour={colours[i]}
+              hovered={hover === i}
+              dimmed={hover !== null && hover !== i}
+              offset={offsetFor(i)}
+              out={open === i}
+              shown={(inView && ready) || !!reduce}
+              register={register}
+              garment={(el) => {
+                garments.current[i] = el;
+              }}
+              trigger={(el) => {
+                triggers.current[i] = el;
+              }}
+              onEnter={onEnter}
+              onOpen={take}
+            />
+          ))}
+        </ul>
+
+        <div aria-hidden className="wardrobe-floor pointer-events-none absolute inset-x-0 bottom-0 h-[6.75rem]" />
+
+        {open !== null && from && (
+          <FittingRoom
+            item={items[open]}
+            index={open}
+            total={items.length}
+            colour={colours[open]}
+            onColour={(c) => setColours((all) => all.map((v, j) => (j === open ? c : v)))}
+            from={from}
+            target={() => garments.current[open]?.getBoundingClientRect() ?? null}
+            onStep={step}
+            onReturned={returned}
+          />
+        )}
+      </div>
+
+      <div className="mt-6 flex items-center gap-6">
+        <div className="relative h-px flex-1 bg-line">
+          <motion.div
+            className="absolute inset-y-0 left-0 w-full origin-left bg-fg"
+            style={{ scaleX: scrollXProgress }}
+          />
+        </div>
+        <div className="flex gap-2">
+          <button
+            type="button"
+            onClick={() => slide(-1)}
+            disabled={edges.start}
+            aria-label="Slide the rail left"
+            className="grid size-11 place-items-center rounded-full border border-line transition-colors hover:border-fg disabled:opacity-30"
+          >
+            <ChevronLeft width={18} />
+          </button>
+          <button
+            type="button"
+            onClick={() => slide(1)}
+            disabled={edges.end}
+            aria-label="Slide the rail right"
+            className="grid size-11 place-items-center rounded-full border border-line transition-colors hover:border-fg disabled:opacity-30"
+          >
+            <ChevronRight width={18} />
+          </button>
+        </div>
+      </div>
     </div>
   );
 }
@@ -671,7 +531,8 @@ function specsOf(text: string) {
 }
 
 /** Width of the garment on the stage: as tall as the stage allows, never wider than half of it. */
-const stageWidth = (c: Cut) => `min(48%, calc(var(--gh) * ${(120 / c.h).toFixed(4)}))`;
+const PRINT_RATIO = "100 / 142"; // 3:4 photo plus the paper margins
+const STAGE_WIDTH = "min(46%, calc(var(--gh) / 1.42))";
 
 function FittingRoom({
   item,
@@ -702,7 +563,6 @@ function FittingRoom({
   const flyer = useRef<HTMLDivElement>(null);
   const [phase, setPhase] = useState<Phase>(reduce ? "docked" : "in");
   const phaseRef = useLatest(phase);
-  const onStepRef = useLatest(onStep);
   const onReturnedRef = useLatest(onReturned);
   const flying = useRef(false);
   const x = useMotionValue(0);
@@ -710,7 +570,12 @@ function FittingRoom({
   const scale = useMotionValue(1);
   const rotate = useMotionValue(0);
   const active = item.colours[colour] ?? item.colours[0];
-  const cut = cutOf(item.family);
+  const [view, setView] = useState(0);
+  const step = (dir: 1 | -1) => {
+    setView(0);
+    onStep(dir);
+  };
+  const stepRef = useLatest(step);
   const no = String(index + 1).padStart(2, "0");
   const specs = specsOf(item.lead);
 
@@ -798,8 +663,8 @@ function FittingRoom({
     }, 80);
     const onKey = (e: KeyboardEvent) => {
       if (e.key === "Escape") close();
-      if (e.key === "ArrowRight" && phaseRef.current === "docked") onStepRef.current(1);
-      if (e.key === "ArrowLeft" && phaseRef.current === "docked") onStepRef.current(-1);
+      if (e.key === "ArrowRight" && phaseRef.current === "docked") stepRef.current(1);
+      if (e.key === "ArrowLeft" && phaseRef.current === "docked") stepRef.current(-1);
       if (e.key !== "Tab") return;
       const items = [
         ...(dialog.current?.querySelectorAll<HTMLElement>("a[href], button:not([disabled])") ?? []),
@@ -821,7 +686,7 @@ function FittingRoom({
       document.removeEventListener("keydown", onKey);
       lenis?.start();
     };
-  }, [lenis, close, phaseRef, onStepRef]);
+  }, [lenis, close, phaseRef, stepRef]);
 
   const visible = phase !== "out";
   const docked = phase === "docked";
@@ -889,55 +754,49 @@ function FittingRoom({
             <span className="font-mono tracking-normal">({no})</span> Off the rail
           </p>
 
-          <div aria-hidden className="wardrobe-spot pointer-events-none absolute bottom-[9%] left-1/2 h-10 w-[46%] -translate-x-1/2" />
-
-          <div
-            ref={place}
-            className="relative"
-            style={{ width: stageWidth(cut), aspectRatio: `120 / ${cut.h}` }}
-          >
-            {/* Mounted with the garment, so landing swaps in place and only style changes animate. */}
+          <div ref={place} className="relative" style={{ width: STAGE_WIDTH, aspectRatio: PRINT_RATIO }}>
+            {/* Mounted with the print, so landing swaps in place and only style changes animate. */}
             {docked && (
               <AnimatePresence mode="popLayout" initial={false}>
                 <motion.div
                   key={item.family}
-                  className="absolute inset-0"
+                  className="absolute inset-x-0 top-0"
                   initial={{ opacity: 0, x: 60, rotate: 4 }}
                   animate={{ opacity: 1, x: 0, rotate: 0 }}
                   exit={{ opacity: 0, x: -60, rotate: -4, transition: { duration: 0.35 } }}
                   transition={{ duration: 0.9, ease: EASE }}
                   style={{ transformOrigin: "50% 0%" }}
                 >
-                  <Trouser family={item.family} swatch={active.swatch} className="garment-shadow" />
+                  <Print colour={active} label={active.color} view={view} sharp />
                 </motion.div>
               </AnimatePresence>
             )}
           </div>
 
-          {/* As worn */}
+          {/* The colourway's other photograph; tap to swap it onto the main print. */}
           <AnimatePresence>
-            {docked && (
+            {docked && active.images.length > 1 && (
               <motion.div
                 key={active.handle}
-                className="absolute bottom-5 right-5 w-[30%] max-w-[210px] md:bottom-8 md:right-8"
+                className="absolute bottom-5 right-5 w-[24%] max-w-[150px] md:bottom-8 md:right-8"
                 initial={{ opacity: 0, y: 24, rotate: 9 }}
                 animate={{ opacity: 1, y: 0, rotate: 4 }}
                 exit={{ opacity: 0, y: 12, rotate: 6, transition: { duration: 0.3 } }}
                 transition={{ duration: 0.9, ease: EASE, delay: 0.15 }}
               >
-                <Link
-                  href={`/products/${active.handle}`}
-                  aria-label={`See ${item.name} in ${active.color}`}
-                  data-cursor="View"
-                  className="relative block rounded-[4px] bg-[#f4f0e7] p-1.5 pb-6 shadow-[0_24px_40px_-16px_rgb(0_0_0/0.5)] transition-transform duration-700 ease-out-expo hover:-rotate-4"
+                <button
+                  type="button"
+                  onClick={() => setView((v) => 1 - v)}
+                  aria-label={`Show the other photograph of ${item.name} in ${active.color}`}
+                  className="relative block w-full rounded-[4px] bg-[#f4f0e7] p-1.5 pb-6 shadow-[0_24px_40px_-16px_rgb(0_0_0/0.5)] transition-transform duration-700 ease-out-expo hover:-rotate-4"
                 >
                   <span className="relative block aspect-[3/4] overflow-hidden rounded-[2px] bg-[#e9e7e2]">
-                    <Image src={active.image} alt="" fill sizes="210px" className="object-cover" />
+                    <Image src={active.images[1 - view]} alt="" fill sizes="150px" className="object-cover" />
                   </span>
                   <span className="absolute inset-x-0 bottom-1.5 truncate px-2 text-center font-mono text-[9px] text-black/55">
-                    As worn · {active.color}
+                    Another look
                   </span>
-                </Link>
+                </button>
               </motion.div>
             )}
           </AnimatePresence>
@@ -1045,7 +904,10 @@ function FittingRoom({
                         role="radio"
                         aria-checked={ci === colour}
                         aria-label={c.color}
-                        onClick={() => onColour(ci)}
+                        onClick={() => {
+                          setView(0);
+                          onColour(ci);
+                        }}
                         className={cn(
                           "relative size-8 rounded-full ring-1 ring-offset-[3px] ring-offset-bg transition-shadow duration-300",
                           ci === colour ? "ring-fg" : "ring-transparent hover:ring-muted",
@@ -1070,22 +932,28 @@ function FittingRoom({
           <div className="mt-10 flex items-center justify-between border-t border-line pt-5 text-sm">
             <button
               type="button"
-              onClick={() => onStep(-1)}
+              onClick={() => step(-1)}
               disabled={!docked}
               className="group flex items-center gap-2 text-muted transition-colors hover:text-fg disabled:opacity-40"
             >
-              <ChevronLeft width={16} className="transition-transform duration-500 ease-out-expo group-hover:-translate-x-1" />
+              <ChevronLeft
+                width={16}
+                className="transition-transform duration-500 ease-out-expo group-hover:-translate-x-1"
+              />
               Previous
             </button>
             <span className="hidden type-label text-muted sm:block">Esc to hang it back</span>
             <button
               type="button"
-              onClick={() => onStep(1)}
+              onClick={() => step(1)}
               disabled={!docked}
               className="group flex items-center gap-2 text-muted transition-colors hover:text-fg disabled:opacity-40"
             >
               Next
-              <ChevronRight width={16} className="transition-transform duration-500 ease-out-expo group-hover:translate-x-1" />
+              <ChevronRight
+                width={16}
+                className="transition-transform duration-500 ease-out-expo group-hover:translate-x-1"
+              />
             </button>
           </div>
         </div>
@@ -1099,7 +967,7 @@ function FittingRoom({
           className="pointer-events-none fixed z-10"
           style={{ x, y, scale, rotate, transformOrigin: "50% 0%" }}
         >
-          <Trouser family={item.family} swatch={active.swatch} className="garment-shadow" />
+          <Print colour={active} label={active.color} view={view} />
         </motion.div>
       )}
     </div>,

@@ -40,7 +40,7 @@ export default async function Home() {
         handle: p.handle,
         color: p.color,
         swatch: p.swatch,
-        image: p.images[0]?.src ?? lead.images[0].src,
+        images: (p.images.length ? p.images : lead.images).slice(0, 2).map((i) => i.src),
         available: p.available,
       })),
     };

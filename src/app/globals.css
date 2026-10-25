@@ -313,8 +313,7 @@ html[data-intro-phase="docking"] .intro-logo {
 }
 
 /*
- * The wardrobe: a lit alcove with a chrome rail. Garments are SVG flats
- * filled with --cloth, so colourway changes fade.
+ * The wardrobe: a lit alcove with a chrome rail; lookbook prints hang from it.
  */
 .wardrobe {
   background:
@@ -334,17 +333,6 @@ html[data-intro-phase="docking"] .intro-logo {
 .wardrobe-floor {
   background: linear-gradient(180deg, color-mix(in oklab, var(--fg) 5%, var(--surface)), var(--surface) 60%);
   border-top: 1px solid var(--line);
-}
-.wardrobe-spot {
-  background: radial-gradient(closest-side, var(--cast), transparent);
-  filter: blur(6px);
-}
-.garment-shadow {
-  filter: drop-shadow(0 22px 20px var(--cast)) drop-shadow(0 2px 2px rgb(0 0 0 / 0.12));
-}
-.cloth {
-  fill: var(--cloth);
-  transition: fill 0.7s var(--ease-out-expo);
 }
 
 /* Installed app (display-mode: standalone): room for the bottom tab bar. */
