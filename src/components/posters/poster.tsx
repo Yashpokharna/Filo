@@ -197,7 +197,7 @@ const layouts: Record<PosterData["slug"], (p: PosterData) => ReactNode> = {
         Stretch, don’t stress.
       </p>
       <p className={cn("absolute bottom-[9%] right-[5%] text-right text-[2.2cqw] leading-relaxed", mono)}>
-        Korean Pant
+        Korean Stretch Pant
         <br />
         Imperial Navy
         <br />

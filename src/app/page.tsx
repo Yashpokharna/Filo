@@ -1,9 +1,9 @@
 import { ProductCarousel } from "@/components/home/carousel";
 import type { FilmShot } from "@/components/home/filo-film";
 import { Hero } from "@/components/home/hero";
-import { Lineup, type LineupItem } from "@/components/home/lineup";
 import { PosterRail } from "@/components/home/poster-rail";
 import { ScaleFilm } from "@/components/home/scale-film";
+import { Wardrobe, type WardrobeItem } from "@/components/home/wardrobe";
 import { Marquee } from "@/components/marquee";
 import { LineReveal, MaskReveal, Reveal } from "@/components/motion";
 import { Poster } from "@/components/posters/poster";
@@ -11,54 +11,58 @@ import { ProductCard } from "@/components/product/product-card";
 import { Accent, SectionHeading } from "@/components/section-heading";
 import { ButtonLink, TextLink } from "@/components/ui/button";
 import Image from "@/components/ui/image";
-import { getProducts, toSummary } from "@/lib/catalog";
+import { findColourway, getProducts, toSummary } from "@/lib/catalog";
 import { formatPrice } from "@/lib/format";
-import { posters } from "@/lib/posters";
+import { getPosters } from "@/lib/posters";
 
 export const revalidate = 900;
 
 const WORDS = ["Zero", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten", "Eleven", "Twelve"];
 
 export default async function Home() {
-  const all = await getProducts();
+  const [all, posters] = await Promise.all([getProducts(), getPosters()]);
   const summary = (p: (typeof all)[number]) => toSummary(p, all);
   const fresh = all.filter((p) => p.isNew && p.available).map(summary);
   const featured = all.filter((p) => p.available && !p.isNew).slice(0, 8).map(summary);
-  const ease = all.find((p) => p.handle === "filo-ease") ?? all[0];
+  const ease = findColourway(all, "ease", "Coffee") ?? all[0];
   const families = [...new Set(all.map((p) => p.family))];
-  const lineup: LineupItem[] = families.map((family) => {
+  const wardrobe: WardrobeItem[] = families.map((family) => {
     const group = all.filter((p) => p.family === family);
     const lead = group.find((p) => p.available) ?? group[0];
     return {
-      href: `/products/${lead.handle}`,
+      family,
       name: lead.name,
       fabric: lead.fabric,
+      lead: lead.lead,
       price: Math.min(...group.map((p) => p.price)),
-      colours: group.length,
-      image: lead.images[0].src,
+      // Catalog order puts available colourways first, so the rail opens on one in stock.
+      colours: group.map((p) => ({
+        handle: p.handle,
+        color: p.color,
+        swatch: p.swatch,
+        image: p.images[0]?.src ?? lead.images[0].src,
+        available: p.available,
+      })),
     };
   });
-  const img = (handle: string, i = 0) =>
-    (all.find((p) => p.handle === handle) ?? ease).images[i]?.src ?? ease.images[0].src;
+  const img = (family: string, color: string, i = 0) =>
+    (findColourway(all, family, color) ?? ease).images[i]?.src ?? ease.images[0].src;
   const shots: FilmShot[] = [
-    { kind: "photo", src: img("linen-pant"), move: "push", enter: "cut", seconds: 2.4 },
-    { kind: "photo", src: img("linen-pant-imperial-navy"), move: "rise", enter: "wipe-up", seconds: 2 },
-    { kind: "photo", src: img("filo-ease"), move: "pan", enter: "wipe-left", seconds: 2.2 },
+    { kind: "photo", src: img("linen-pant", "Obsidian Black"), move: "push", enter: "cut", seconds: 2.4 },
+    { kind: "photo", src: img("linen-pant", "Imperial Navy"), move: "rise", enter: "wipe-up", seconds: 2 },
+    { kind: "photo", src: img("ease", "Coffee"), move: "pan", enter: "wipe-left", seconds: 2.2 },
     {
       kind: "triptych",
-      srcs: [img("filo-ease-obsidian-black"), img("filo-ease-1"), img("filo-ease", 1)],
+      srcs: [img("ease", "Obsidian Black"), img("ease", "Sterling Grey"), img("ease", "Coffee", 1)],
       enter: "cut",
       seconds: 1.8,
     },
-    { kind: "photo", src: img("korean-pant-imperial-navy"), move: "pan", enter: "zoom", seconds: 2.3 },
-    { kind: "photo", src: img("korean-pant-sterling-grey"), move: "push", enter: "slide", seconds: 2 },
-    { kind: "photo", src: img("korean-pant-champagne-sand"), move: "rise", enter: "wipe-up", seconds: 2.2 },
-    { kind: "photo", src: img("linen-pant-white"), move: "pull", enter: "slide", seconds: 2.2 },
+    { kind: "photo", src: img("korean-stretch-pant", "Imperial Navy"), move: "pan", enter: "zoom", seconds: 2.3 },
+    { kind: "photo", src: img("korean-stretch-pant", "Sterling Grey"), move: "push", enter: "slide", seconds: 2 },
+    { kind: "photo", src: img("korean-stretch-pant", "Champagne Sand"), move: "rise", enter: "wipe-up", seconds: 2.2 },
+    { kind: "photo", src: img("linen-pant", "Vanilla White"), move: "pull", enter: "slide", seconds: 2.2 },
   ];
-  const floats: [string, string] = [
-    all.find((p) => p.handle === "linen-pant")?.images[0].src ?? ease.images[0].src,
-    all.find((p) => p.handle === "korean-pant-champagne-sand")?.images[0].src ?? ease.images[0].src,
-  ];
+  const floats: [string, string] = [img("linen-pant", "Obsidian Black"), img("korean-stretch-pant", "Champagne Sand")];
 
   return (
     <>
@@ -88,21 +92,28 @@ export default async function Home() {
         </div>
       </section>
 
-      {/* Lineup */}
-      <section className="pb-28 md:pb-40" aria-labelledby="lineup">
+      {/* Wardrobe */}
+      <section className="pb-28 md:pb-40" aria-labelledby="wardrobe">
         <SectionHeading
           index="02"
-          eyebrow="The lineup"
+          eyebrow="The wardrobe"
           title={[
-            <span key="a" id="lineup">
-              {WORDS[families.length] ?? families.length} styles.
+            <span key="a" id="wardrobe">
+              {WORDS[families.length] ?? families.length} styles,
             </span>,
-            <Accent key="b">One standard.</Accent>,
+            <Accent key="b">one rail.</Accent>,
           ]}
-          aside={<TextLink href="/shop">View all {all.length} colourways</TextLink>}
+          aside={
+            <div className="flex flex-col gap-4 md:items-end">
+              <p className="max-w-xs text-sm text-muted">
+                Run along the rail and take a pair off the hanger to see it up close.
+              </p>
+              <TextLink href="/shop">View all {all.length} colourways</TextLink>
+            </div>
+          }
         />
         <div className="container-x mt-12 md:mt-16">
-          <Lineup items={lineup} />
+          <Wardrobe items={wardrobe} />
         </div>
       </section>
 

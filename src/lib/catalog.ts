@@ -73,15 +73,24 @@ type FamilyMeta = { name: string; fabric: string; categories: CategoryKey[]; ord
 
 const FAMILIES: Record<string, FamilyMeta> = {
   ease: { name: "Ease", fabric: "Wrinkle-free", categories: ["easy-care"], order: 1 },
-  "travel-pants": { name: "Travel Pant", fabric: "4-Way Lycra", categories: ["stretch"], order: 2 },
+  "travel-pant": { name: "Travel Pant", fabric: "4-Way Lycra", categories: ["stretch"], order: 2 },
   "linen-pant": { name: "Linen Pant", fabric: "100% Linen", categories: ["linen"], order: 3 },
-  "korean-pant": { name: "Korean Pant", fabric: "2-Way Lycra", categories: ["stretch"], order: 4 },
+  "korean-stretch-pant": { name: "Korean Stretch Pant", fabric: "2-Way Lycra", categories: ["stretch"], order: 4 },
   "flexi-trouser": { name: "Flexi Trouser", fabric: "2-Way Lycra", categories: ["stretch"], order: 5 },
   "9to5": { name: "9TO5", fabric: "2-Way Stretch", categories: ["tailored", "stretch"], order: 6 },
-  "buckle-pants-style-1": { name: "Buckle Pant I", fabric: "Tailored", categories: ["tailored"], order: 7 },
-  "buckle-pants-style-2": { name: "Buckle Pant II", fabric: "Tailored", categories: ["tailored"], order: 8 },
+  "buckle-tailored": { name: "Buckle Tailored", fabric: "Tailored", categories: ["tailored"], order: 7 },
+  "buckle-utility": { name: "Buckle Utility", fabric: "Tailored", categories: ["tailored"], order: 8 },
   "air-linen-shorts": { name: "Air Linen Short", fabric: "Premium Linen", categories: ["linen", "shorts"], order: 9 },
   classic: { name: "Classic", fabric: "100% Cotton", categories: ["tailored"], order: 10 },
+};
+
+/** Earlier Shopify titles (still in the offline snapshot) and edition titles → family. */
+const FAMILY_ALIASES: Record<string, string> = {
+  "travel-pants": "travel-pant",
+  "korean-pant": "korean-stretch-pant",
+  "buckle-pants-style-1": "buckle-tailored",
+  "buckle-pants-style-2": "buckle-utility",
+  flexi: "flexi-trouser",
 };
 
 const COLORS: Record<string, string> = {
@@ -108,8 +117,10 @@ const slugify = (s: string) =>
 /* -------------------------------------------------------- normalization -- */
 
 function parseTitle(title: string) {
-  const clean = title.replace(/\s+/g, " ").replace(/^filo\s*(-\s*)?/i, "").trim();
-  const cut = clean.lastIndexOf(" - ");
+  const clean = title.replace(/\s+/g, " ").replace(/^filo\s*([-–—]\s*)?/i, "").trim();
+  // "Style - Colour"; the store has used hyphens, en dashes and em dashes.
+  const sep = [...clean.matchAll(/ [-–—] /g)].at(-1);
+  const cut = sep?.index ?? -1;
   let family = cut > -1 ? clean.slice(0, cut) : clean;
   let color = cut > -1 ? clean.slice(cut + 3) : "";
   color = COLOR_ALIASES[color.toLowerCase()] ?? color;
@@ -119,7 +130,8 @@ function parseTitle(title: string) {
     edition = "Founder’s Edition";
     family = family.slice(0, ed.index);
   }
-  return { family: slugify(family), familyLabel: family, color, edition };
+  const slug = slugify(family);
+  return { family: FAMILY_ALIASES[slug] ?? slug, familyLabel: family, color, edition };
 }
 
 /** Split Shopify body HTML into a lead paragraph + short bullet highlights. */
@@ -242,6 +254,23 @@ export function getProducts(): Promise<Product[]> {
 
 export async function getProduct(handle: string) {
   return (await getProducts()).find((p) => p.handle === handle) ?? null;
+}
+
+/**
+ * A colourway by style and colour name. Shopify handles change when the store
+ * renames products, so hard-coded references go through this instead. Falls
+ * back to the style's first in-stock colourway.
+ */
+export function findColourway(all: Product[], family: string, color?: string) {
+  const group = all.filter((p) => p.family === family);
+  const match = color && group.find((p) => p.color.toLowerCase() === color.toLowerCase());
+  return match || group.find((p) => p.available) || group[0];
+}
+
+/** Product URL for a style and colour, or the shop if the style is gone. */
+export function colourwayHref(all: Product[], family: string, color?: string) {
+  const product = findColourway(all, family, color);
+  return product ? `/products/${product.handle}` : "/shop";
 }
 
 export function siblingsOf(product: Product, all: Product[]) {

@@ -2,7 +2,12 @@
  * FILO Poster Series — campaign artwork composed in code from the product
  * photography. Each palette is taken from the colourway it celebrates.
  */
+import { colourwayHref, getProducts } from "@/lib/catalog";
+
 const CDN = "https://cdn.shopify.com/s/files/1/0819/7786/8547/files";
+
+/** A colourway by style and colour; resolved to a product URL at render time. */
+type ColourwayRef = { family: string; color: string };
 
 export type PosterData = {
   slug: "no-iron" | "linen-season" | "nine-to-five" | "go-further" | "stretch" | "founders";
@@ -17,13 +22,13 @@ export type PosterData = {
   images: string[];
 };
 
-export const posters: PosterData[] = [
+const series: (Omit<PosterData, "href"> & { href: string | ColourwayRef })[] = [
   {
     slug: "no-iron",
     no: "01",
     title: "No Iron. No Fuss.",
     blurb: "FILO Ease in Coffee — the wrinkle-free trouser that goes from wash to wear.",
-    href: "/products/filo-ease",
+    href: { family: "ease", color: "Coffee" },
     cta: "Shop FILO Ease",
     bg: "#6b5442",
     fg: "#f3ebdf",
@@ -47,7 +52,7 @@ export const posters: PosterData[] = [
     no: "03",
     title: "Nine to Five, and Beyond",
     blurb: "FILO 9TO5 — a smart corporate fit in 2-way stretch. Professional in appearance, flexible in comfort.",
-    href: "/products/filo-eco",
+    href: { family: "9to5", color: "Obsidian Black" },
     cta: "Shop 9TO5",
     bg: "#19191b",
     fg: "#ece9e2",
@@ -59,7 +64,7 @@ export const posters: PosterData[] = [
     no: "04",
     title: "Go Further",
     blurb: "The Travel Pant in 4-way lycra with an elastic waistband. Built for long journeys.",
-    href: "/products/filo-travel-pants",
+    href: { family: "travel-pant", color: "Obsidian Black" },
     cta: "Shop Travel Pant",
     bg: "#babdc1",
     fg: "#121212",
@@ -70,9 +75,9 @@ export const posters: PosterData[] = [
     slug: "stretch",
     no: "05",
     title: "Stretch, Don’t Stress",
-    blurb: "The Korean Pant in Imperial Navy — a clean, modern fit with 2-way stretch.",
-    href: "/products/korean-pant-imperial-navy",
-    cta: "Shop Korean Pant",
+    blurb: "The Korean Stretch Pant in Imperial Navy — a clean, modern fit with 2-way stretch.",
+    href: { family: "korean-stretch-pant", color: "Imperial Navy" },
+    cta: "Shop Korean Stretch Pant",
     bg: "#1e2942",
     fg: "#e8e3d8",
     accent: "#9fb0d6",
@@ -83,7 +88,7 @@ export const posters: PosterData[] = [
     no: "06",
     title: "Founder’s Edition",
     blurb: "Flexi Trouser in Rose Blush and Olive Mosh — the Founder’s Edition colourways in 2-way lycra.",
-    href: "/products/filo-flexi-trouser-founders-edition-rose-blush",
+    href: { family: "flexi-trouser", color: "Rose Blush" },
     cta: "Shop Founder’s Edition",
     bg: "#ead9d2",
     fg: "#3b2b29",
@@ -94,3 +99,12 @@ export const posters: PosterData[] = [
     ],
   },
 ];
+
+/** The series with product links pointing at whatever the catalog currently calls each colourway. */
+export async function getPosters(): Promise<PosterData[]> {
+  const all = await getProducts();
+  return series.map(({ href, ...poster }) => ({
+    ...poster,
+    href: typeof href === "string" ? href : colourwayHref(all, href.family, href.color),
+  }));
+}

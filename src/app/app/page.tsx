@@ -3,7 +3,7 @@ import { AppIcon, InstallButton } from "@/components/app/install";
 import { PhoneMockup } from "@/components/app/phone-mockup";
 import { QrCode } from "@/components/app/qr-code";
 import { LineReveal, Reveal } from "@/components/motion";
-import { getProducts } from "@/lib/catalog";
+import { findColourway, getProducts } from "@/lib/catalog";
 
 export const revalidate = 900;
 
@@ -57,7 +57,7 @@ export default async function AppPage() {
     color: p.color,
     price: p.price,
   }));
-  const hero = all.find((p) => p.handle === "linen-pant")?.images[0].src ?? all[0].images[0].src;
+  const hero = (findColourway(all, "linen-pant", "Obsidian Black") ?? all[0]).images[0].src;
 
   return (
     <>

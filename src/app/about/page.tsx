@@ -10,7 +10,7 @@ import { Film } from "@/components/home/film";
 import { LineReveal, MaskReveal, Reveal } from "@/components/motion";
 import { ButtonLink } from "@/components/ui/button";
 import Image from "@/components/ui/image";
-import { getProducts } from "@/lib/catalog";
+import { findColourway, getProducts } from "@/lib/catalog";
 import { cn } from "@/lib/format";
 
 export const revalidate = 900;
@@ -86,8 +86,8 @@ function ChapterBlock({ chapter, index }: { chapter: Chapter; index: number }) {
 
 export default async function AboutPage() {
   const all = await getProducts();
-  const img = (handle: string, i = 0) =>
-    (all.find((p) => p.handle === handle) ?? all[0]).images[i]?.src ?? all[0].images[0].src;
+  const img = (family: string, color: string, i = 0) =>
+    (findColourway(all, family, color) ?? all[0]).images[i]?.src ?? all[0].images[0].src;
   const styles = new Set(all.map((p) => p.family)).size;
   const sizes = new Set(all.flatMap((p) => p.sizes.map((s) => s.size))).size;
 
@@ -141,7 +141,7 @@ export default async function AboutPage() {
       title: ["Silhouette", <em key="b">first.</em>],
       body: (
         <p>
-          Before a single cut, we decide how a pair should fall — the clean, relaxed line of the Korean Pant, the easy
+          Before a single cut, we decide how a pair should fall — the clean, relaxed line of the Korean Stretch Pant, the easy
           drape of linen, the sharp break of tailoring. Pattern first, then precision.
         </p>
       ),
@@ -165,7 +165,7 @@ export default async function AboutPage() {
       media: (
         <div className="relative aspect-[4/5] bg-white">
           <Image
-            src={img("filo-buckle-pants-style-1")}
+            src={img("buckle-tailored", "Obsidian Black")}
             alt="Buckle waistband detail on FILO tailored trousers"
             fill
             sizes="(min-width:768px) 40vw, 100vw"
@@ -188,7 +188,7 @@ export default async function AboutPage() {
       media: (
         <div className="relative aspect-[4/5]">
           <Image
-            src={img("filo-ease")}
+            src={img("ease", "Coffee")}
             alt="FILO Ease wrinkle-free trousers in Coffee"
             fill
             sizes="(min-width:768px) 40vw, 100vw"
